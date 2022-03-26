@@ -85,11 +85,11 @@ public class SlotController : MonoBehaviour
         //Comandos
         if(_Slots.isPurchased == true)
         {
-            if(coin == 0 && _Slots.isAutoProduction == false)
+            if(coin == 0)
             {
                 coinproduction();
             }
-            else if(_Slots.isAutoProduction == true)
+            else if(coin > 0 && _Slots.isAutoProduction == true)
             {
                 coinproduction();
             }
@@ -133,7 +133,7 @@ public class SlotController : MonoBehaviour
             tempTime = 0;
             coin += _Slots.slotProduction;
             xp += _Slots.xpProduction;
-            productionTxt.text = _GameController.currencyConverterCoin(_Slots.slotProduction);
+            productionTxt.text = _GameController.currencyConverterCoin(coin);
         }
 
         if(coin > 0) { icoCoinProduction.gameObject.SetActive(true); } else { icoCoinProduction.gameObject.SetActive(false); }
@@ -239,6 +239,43 @@ public class SlotController : MonoBehaviour
         {
             upgradeStatus(0);
         }
+        else if (_Slots.slotLevel == 2 && _Slots.upgrades >= _GameController.progressSlot[_Slots.slotLevel - 1])
+        {
+            upgradeStatus(1);
+            _Slots.isAutoProduction = true;
+        }
+        else if (_Slots.slotLevel == 3 && _Slots.upgrades >= _GameController.progressSlot[_Slots.slotLevel - 1])
+        {
+            upgradeStatus(0);
+        }
+        else if (_Slots.slotLevel == 4 && _Slots.upgrades >= _GameController.progressSlot[_Slots.slotLevel - 1])
+        {
+            upgradeStatus(1);
+        }
+        else if (_Slots.slotLevel == 5 && _Slots.upgrades >= _GameController.progressSlot[_Slots.slotLevel - 1])
+        {
+            upgradeStatus(0);
+            _GameController.getGems(25);
+        }
+        else if (_Slots.slotLevel == 6 && _Slots.upgrades >= _GameController.progressSlot[_Slots.slotLevel - 1])
+        {
+            upgradeStatus(1);
+        }
+        else if (_Slots.slotLevel == 7 && _Slots.upgrades >= _GameController.progressSlot[_Slots.slotLevel - 1])
+        {
+            upgradeStatus(0);
+        }
+        else if (_Slots.slotLevel == 8 && _Slots.upgrades >= _GameController.progressSlot[_Slots.slotLevel - 1])
+        {
+            upgradeStatus(1);
+        }
+        else if (_Slots.slotLevel == 9 && _Slots.upgrades >= _GameController.progressSlot[_Slots.slotLevel - 1])
+        {
+            upgradeStatus(1);
+            upgradeStatus(0);
+            _GameController.getGems(25);
+            _Slots.isMax = true;
+        }
 
 
 
@@ -300,14 +337,14 @@ public class SlotController : MonoBehaviour
         }
         else
         {
-            //Condição com dinheiro para evoluir
+            //Possui coin para evoluir
             if(_GameController.checkCoin(_Slots.upgradePrice) == true)
             {
                 bgUpgrade.sprite = _GameController.bgUpgrade[1];
                 priceUpgradeTxt.color = _GameController.colorText[1];
                 icoCoinUpgrade.sprite = _GameController.icoCoin[1];
             }
-            else //Não possuo coin
+            else //Não possui coin
             {
                 bgUpgrade.sprite = _GameController.bgUpgrade[0];
                 priceUpgradeTxt.color = _GameController.colorText[0];
@@ -371,7 +408,7 @@ public class SlotController : MonoBehaviour
 
     IEnumerator loopUpgrade()
     {
-        if(_GameController.checkCoin(_Slots.upgradePrice) == true && _Slots.isMax == false)
+        if(_Slots.isMax == false)
         {
             upgradeSlot();
         }

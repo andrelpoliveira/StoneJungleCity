@@ -37,6 +37,7 @@ public class Slots : ScriptableObject
         slotCard = initialCard;
         slotProductionMultiplier = 1;
         slotProductionReduction = 1;
+        isAutoProduction = false;
 
     }
 
@@ -49,7 +50,7 @@ public class Slots : ScriptableObject
         slotProduction = slotCard.production * slotCard.productionMultiplier * slotProductionMultiplier * mult * _GameController.multiplierBonus * _GameController.multiplierBonusTemp;
         slotTimeProduction = slotCard.timeProduction / slotCard.productionReduction / slotProductionReduction / _GameController.reductionBonus / _GameController.reductionBonusTemp;
         //Upgrade Price Cálculo
-        upgradePrice = slotProduction * slotProductionMultiplier * mult * 1.5f;
+        upgradePrice = slotProduction * slotProductionMultiplier * 1.5f;
 
     }
 
