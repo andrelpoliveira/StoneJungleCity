@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f7e78994f4bba24fbc9ec0bb67a00ec, type: 3}
-  m_Name: 01 - RES - Casa Simples
+  m_Name: 37 - ADM - Administration
   m_EditorClassIdentifier: 
-  idCard: 1
-  cardName: "Casa de Fam\xEDlia"
-  spriteCard: {fileID: 21300000, guid: d2e1e0fb02145f244bc533e72f068b3f, type: 3}
-  shadowCard: {fileID: 21300000, guid: 7350ca3567b4d6947ba99bfc858a95e9, type: 3}
+  idCard: 37
+  cardName: "Administra\xE7\xE3o"
+  spriteCard: {fileID: 21300000, guid: a8c6bfd1a0ca28f4ea10eabafe27b88f, type: 3}
+  shadowCard: {fileID: 21300000, guid: 382a031365ee2714eb6c514a7fb9768d, type: 3}
   rarityCard: 0
-  isLiberate: 1
+  isLiberate: 0
   levelCard: 1
-  production: 5
-  timeProduction: 3
+  production: 185
+  timeProduction: 14
   productionMultiplier: 1
   productionReduction: 1
   isMax: 0

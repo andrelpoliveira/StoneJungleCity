@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dbf2c573332423448d5faf206cecfda, type: 3}
-  m_Name: Slot1
+  m_Name: Slot31
   m_EditorClassIdentifier: 
   _GameController: {fileID: 0}
-  idSlot: 1
-  slotCard: {fileID: 11400000, guid: 57aada1aac5c3104d9366c31007c02b3, type: 2}
-  initialCard: {fileID: 11400000, guid: 57aada1aac5c3104d9366c31007c02b3, type: 2}
-  isPurchased: 1
+  idSlot: 31
+  slotCard: {fileID: 11400000, guid: c111edc3e2d2d84489b9ee4453232c74, type: 2}
+  initialCard: {fileID: 11400000, guid: c111edc3e2d2d84489b9ee4453232c74, type: 2}
+  isPurchased: 0
   isMax: 0
   isAutoProduction: 0
-  slotPrice: 10
-  slotProduction: 5
-  xpProduction: 5
-  slotTimeProduction: 3
+  slotPrice: 300
+  slotProduction: 80
+  xpProduction: 80
+  slotTimeProduction: 0
   slotLevel: 1
   upgrades: 0
   totalUpgrades: 0
-  upgradePrice: 1
+  upgradePrice: 0
   slotProductionMultiplier: 1
   slotProductionReduction: 1

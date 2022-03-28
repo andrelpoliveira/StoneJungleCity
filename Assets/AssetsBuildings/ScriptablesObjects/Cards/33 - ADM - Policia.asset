@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f7e78994f4bba24fbc9ec0bb67a00ec, type: 3}
-  m_Name: 01 - RES - Casa Simples
+  m_Name: 33 - ADM - Policia
   m_EditorClassIdentifier: 
-  idCard: 1
-  cardName: "Casa de Fam\xEDlia"
-  spriteCard: {fileID: 21300000, guid: d2e1e0fb02145f244bc533e72f068b3f, type: 3}
-  shadowCard: {fileID: 21300000, guid: 7350ca3567b4d6947ba99bfc858a95e9, type: 3}
+  idCard: 32
+  cardName: Delegacia de Policia
+  spriteCard: {fileID: 21300000, guid: 7773cdedbf9edca4d997a45160665cea, type: 3}
+  shadowCard: {fileID: 21300000, guid: d92c86b6455501548855ed289d69d1dc, type: 3}
   rarityCard: 0
-  isLiberate: 1
+  isLiberate: 0
   levelCard: 1
-  production: 5
-  timeProduction: 3
+  production: 106
+  timeProduction: 12
   productionMultiplier: 1
   productionReduction: 1
   isMax: 0

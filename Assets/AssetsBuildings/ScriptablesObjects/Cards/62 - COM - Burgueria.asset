@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f7e78994f4bba24fbc9ec0bb67a00ec, type: 3}
-  m_Name: 01 - RES - Casa Simples
+  m_Name: 62 - COM - Burgueria
   m_EditorClassIdentifier: 
-  idCard: 1
-  cardName: "Casa de Fam\xEDlia"
-  spriteCard: {fileID: 21300000, guid: d2e1e0fb02145f244bc533e72f068b3f, type: 3}
-  shadowCard: {fileID: 21300000, guid: 7350ca3567b4d6947ba99bfc858a95e9, type: 3}
+  idCard: 62
+  cardName: Hamburgueria
+  spriteCard: {fileID: 21300000, guid: c806f92c283605746b9d2a7dad006532, type: 3}
+  shadowCard: {fileID: 21300000, guid: 43aa4c4a431c6fa438a28ee1660bd166, type: 3}
   rarityCard: 0
-  isLiberate: 1
+  isLiberate: 0
   levelCard: 1
-  production: 5
-  timeProduction: 3
+  production: 60
+  timeProduction: 2
   productionMultiplier: 1
   productionReduction: 1
   isMax: 0

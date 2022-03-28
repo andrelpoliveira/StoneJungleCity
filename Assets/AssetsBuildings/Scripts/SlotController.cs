@@ -38,7 +38,7 @@ public class SlotController : MonoBehaviour
 
     [Header("Slots GamePlay")]
     public Slots            _Slots;
-    private double          coin;
+    public double           coin;
     private float           tempTime;
     private float           fillAmount;
     private int             xp;
@@ -74,6 +74,7 @@ public class SlotController : MonoBehaviour
             buildSprite.enabled = true;
         }
 
+        UpgradeHudSlot();
         isInitalized = true;
     }
 
@@ -93,7 +94,7 @@ public class SlotController : MonoBehaviour
             {
                 coinproduction();
             }
-
+            UpgradeHudSlot();
         }
         else if(_Slots.isPurchased == false)
         {
@@ -389,9 +390,9 @@ public class SlotController : MonoBehaviour
         {
             coinCollect();
         }
-        else if(_GameController.currentState == GameState.GAMEPLAY && _Slots.isPurchased == false)
+        else if(_GameController.currentState == GameState.GAMEPLAY && _Slots.isPurchased == false && _GameController.checkCoin(_Slots.slotPrice) == true)
         {
-            _GameController.BuySlot(_Slots);
+            _GameController.BuySlot(_Slots, this);
         }
     }
 
@@ -408,7 +409,7 @@ public class SlotController : MonoBehaviour
 
     IEnumerator loopUpgrade()
     {
-        if(_Slots.isMax == false)
+        if(_GameController.checkCoin(_Slots.upgradePrice) == true &&_Slots.isMax == false)
         {
             upgradeSlot();
         }

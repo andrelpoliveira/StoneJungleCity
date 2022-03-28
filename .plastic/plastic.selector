@@ -1,4 +1,0 @@
-repository "Stone Jungle City@local"
-  path "/"
-    br "/main"
-    co "/main"

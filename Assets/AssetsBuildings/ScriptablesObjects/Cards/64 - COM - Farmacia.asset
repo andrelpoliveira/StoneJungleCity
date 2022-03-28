@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f7e78994f4bba24fbc9ec0bb67a00ec, type: 3}
-  m_Name: 01 - RES - Casa Simples
+  m_Name: 64 - COM - Farmacia
   m_EditorClassIdentifier: 
-  idCard: 1
-  cardName: "Casa de Fam\xEDlia"
-  spriteCard: {fileID: 21300000, guid: d2e1e0fb02145f244bc533e72f068b3f, type: 3}
-  shadowCard: {fileID: 21300000, guid: 7350ca3567b4d6947ba99bfc858a95e9, type: 3}
+  idCard: 64
+  cardName: Farmacia
+  spriteCard: {fileID: 21300000, guid: 576bd7e0a8f9aa140aecf2a8e2de8293, type: 3}
+  shadowCard: {fileID: 21300000, guid: dbabe617f6b32c741b5e5cbe8f607716, type: 3}
   rarityCard: 0
-  isLiberate: 1
+  isLiberate: 0
   levelCard: 1
-  production: 5
-  timeProduction: 3
+  production: 90
+  timeProduction: 2
   productionMultiplier: 1
   productionReduction: 1
   isMax: 0

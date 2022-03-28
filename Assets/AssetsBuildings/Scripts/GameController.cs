@@ -29,6 +29,7 @@ public class GameController : MonoBehaviour
     public Color[]          colorText; // 0 - inativa, 1 - ativa
 
     [Header("HUD Gameplay")]
+    public GameObject       panelGamePlay;
     public GameObject       panelFume;
     public Text             coinTxt;
     public Text             gemsTxt;
@@ -44,6 +45,10 @@ public class GameController : MonoBehaviour
     [TextArea]
     public string[]         questDescription;   //Descrição da Quest
 
+    [Header("CUT Compra")]
+    public GameObject       panelBuy;
+    public Text             buyDescriptiontxt;
+    public Image            icoBuild;
 
     [Header("HUD Botões")]
     public GameObject       btnUpgrade;
@@ -64,6 +69,7 @@ public class GameController : MonoBehaviour
     //Variáveis de GamePlay
     [Header("Variáveis GamePlay")]
     public GameState        currentState;
+    [SerializeField]
     private double          coins, coinsAccumulated;
     private int             gems, gemsAccumulated;
     private int             xp, xpAccumulated;
@@ -160,6 +166,12 @@ public class GameController : MonoBehaviour
         string valorTemp = "";
         double temp = 0;
 
+        if (valor >= 1e+18D)
+        {
+            temp = valor / 1e+18D;
+            valorTemp = temp.ToString("N1");
+            r = removeZero(valorTemp) + "QQ";
+        }
         if (valor >= 1e+15D)
         {
             temp = valor / 1e+15D;
@@ -218,7 +230,7 @@ public class GameController : MonoBehaviour
 
         if(accumulated[1] != "0")
         {
-            r = accumulated[0] + "," + accumulated[1];
+            r = accumulated[0] + "." + accumulated[1];
         }
         else
         {
@@ -250,9 +262,15 @@ public class GameController : MonoBehaviour
     }
     private void resete()
     {
-        coinsAccumulated = 0;
-        xpAccumulated = 0;
-        gemsAccumulated = 0;
+        if(coins <= 0)
+        {
+            coins = 0;
+            xp = 0;
+            gems = 0;
+            coinsAccumulated = 0;
+            xpAccumulated = 0;
+            gemsAccumulated = 0;
+        }
         foreach(Card c in cards)
         {
             c.reset();
@@ -262,6 +280,7 @@ public class GameController : MonoBehaviour
         {
             s.reset();
         }
+        print("resete");
     }
 
     public bool checkCoin(double qtd)
@@ -303,8 +322,30 @@ public class GameController : MonoBehaviour
         }
     }
 
-    public void BuySlot(Slots s)
+    public void BuySlot(Slots s, SlotController sc)
     {
+        changeGameState(GameState.CUT);
+        panelGamePlay.SetActive(false);
+        panelFume.SetActive(true);
 
+        icoBuild.sprite = s.slotCard.spriteCard;
+        buyDescriptiontxt.text = "Você liberou <color=#00FFFF>" + s.slotCard.cardName + "</color>";
+
+        panelBuy.SetActive(true);
+
+        getCoin(s.slotPrice * -1);
+        
+        s.isPurchased = true;
+        s.slotCard.isLiberate = true;
+        s.StartSlotsScriptable();
+
+        sc.StartSlot();
+    }
+    public void CloseCut()
+    {
+        changeGameState(GameState.GAMEPLAY);
+        panelBuy.SetActive(false);
+        panelFume.SetActive(false);
+        panelGamePlay.SetActive(true);
     }
 }
