@@ -20,12 +20,12 @@ MonoBehaviour:
   isMax: 0
   isAutoProduction: 0
   slotPrice: 0
-  slotProduction: 2
-  xpProduction: 2
+  slotProduction: 20
+  xpProduction: 17
   slotTimeProduction: 3
-  slotLevel: 1
+  slotLevel: 2
   upgrades: 0
-  totalUpgrades: 0
-  upgradePrice: 3
-  slotProductionMultiplier: 1
+  totalUpgrades: 5
+  upgradePrice: 60
+  slotProductionMultiplier: 2
   slotProductionReduction: 1

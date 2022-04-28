@@ -142,10 +142,10 @@ public class GameController : MonoBehaviour
                 fillAmountXp = (float)xp / xpMax[level];
             }
         }
-        if (xp == xpMax[level])
+        if (xp >= xpMax[level])
         {
             Debug.Log("Update");
-            xp = 0;
+            xp = xp - xpMax[level];
             updateLevel();
             
             if (xpAccumulated <= 0.1f)
