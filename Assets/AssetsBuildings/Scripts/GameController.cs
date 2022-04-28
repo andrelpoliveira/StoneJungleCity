@@ -72,7 +72,7 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private double          coins, coinsAccumulated;
     private int             gems, gemsAccumulated;
-    private int             xp, xpAccumulated;
+    [SerializeField]private int             xp, xpAccumulated;
     private float           fillAmountXp;
     public int              level;
     public string[]         accumulated;
@@ -131,6 +131,7 @@ public class GameController : MonoBehaviour
         if(qtdXp > 0) { xpAccumulated += qtdXp; }
         if(xp < xpMax[level]) //Levels
         {
+            Debug.Log(level);
             xpTxt.text = currencyConverterXP(xp) + "/" + xpMax[level].ToString();
             if(xpAccumulated <= 0.1f)
             {
@@ -141,8 +142,9 @@ public class GameController : MonoBehaviour
                 fillAmountXp = (float)xp / xpMax[level];
             }
         }
-        else if (xp == xpMax[level])
+        if (xp == xpMax[level])
         {
+            Debug.Log("Update");
             xp = 0;
             updateLevel();
             

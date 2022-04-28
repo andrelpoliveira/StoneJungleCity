@@ -183,7 +183,6 @@ public class SlotController : MonoBehaviour
         tx.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 500));
 
         xp = 0;
-
     }
 
     public void gemCollect()

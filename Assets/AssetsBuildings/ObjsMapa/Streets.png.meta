@@ -68,6 +68,9 @@ TextureImporter:
   - first:
       213: 6059764499565842204
     second: Streets_21
+  - first:
+      213: -2418544115707172167
+    second: Streets_22
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -196,9 +199,9 @@ TextureImporter:
       name: Streets_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 256
-        width: 126
+        x: 0
+        y: 384
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -217,9 +220,9 @@ TextureImporter:
       name: Streets_1
       rect:
         serializedVersion: 2
-        x: 129
-        y: 256
-        width: 126
+        x: 128
+        y: 384
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -238,9 +241,9 @@ TextureImporter:
       name: Streets_2
       rect:
         serializedVersion: 2
-        x: 257
-        y: 256
-        width: 126
+        x: 256
+        y: 384
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -259,9 +262,9 @@ TextureImporter:
       name: Streets_3
       rect:
         serializedVersion: 2
-        x: 385
-        y: 256
-        width: 126
+        x: 384
+        y: 384
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -280,9 +283,9 @@ TextureImporter:
       name: Streets_4
       rect:
         serializedVersion: 2
-        x: 513
-        y: 256
-        width: 126
+        x: 512
+        y: 384
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -301,9 +304,9 @@ TextureImporter:
       name: Streets_5
       rect:
         serializedVersion: 2
-        x: 641
-        y: 256
-        width: 126
+        x: 640
+        y: 384
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -322,9 +325,9 @@ TextureImporter:
       name: Streets_6
       rect:
         serializedVersion: 2
-        x: 769
-        y: 256
-        width: 126
+        x: 768
+        y: 384
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -343,9 +346,9 @@ TextureImporter:
       name: Streets_7
       rect:
         serializedVersion: 2
-        x: 1
-        y: 128
-        width: 126
+        x: 0
+        y: 256
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -364,9 +367,9 @@ TextureImporter:
       name: Streets_8
       rect:
         serializedVersion: 2
-        x: 129
-        y: 128
-        width: 126
+        x: 128
+        y: 256
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -385,9 +388,9 @@ TextureImporter:
       name: Streets_9
       rect:
         serializedVersion: 2
-        x: 257
-        y: 128
-        width: 126
+        x: 256
+        y: 256
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -406,9 +409,9 @@ TextureImporter:
       name: Streets_10
       rect:
         serializedVersion: 2
-        x: 385
-        y: 128
-        width: 126
+        x: 384
+        y: 256
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -427,9 +430,9 @@ TextureImporter:
       name: Streets_11
       rect:
         serializedVersion: 2
-        x: 513
-        y: 128
-        width: 126
+        x: 512
+        y: 256
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -448,9 +451,9 @@ TextureImporter:
       name: Streets_12
       rect:
         serializedVersion: 2
-        x: 641
-        y: 128
-        width: 126
+        x: 640
+        y: 256
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -469,9 +472,9 @@ TextureImporter:
       name: Streets_13
       rect:
         serializedVersion: 2
-        x: 769
-        y: 128
-        width: 126
+        x: 768
+        y: 256
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -490,9 +493,9 @@ TextureImporter:
       name: Streets_14
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 126
+        x: 0
+        y: 128
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -511,9 +514,9 @@ TextureImporter:
       name: Streets_15
       rect:
         serializedVersion: 2
-        x: 129
-        y: 0
-        width: 126
+        x: 128
+        y: 128
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -532,9 +535,9 @@ TextureImporter:
       name: Streets_16
       rect:
         serializedVersion: 2
-        x: 257
-        y: 0
-        width: 126
+        x: 256
+        y: 128
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -553,9 +556,9 @@ TextureImporter:
       name: Streets_17
       rect:
         serializedVersion: 2
-        x: 385
-        y: 0
-        width: 126
+        x: 384
+        y: 128
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -574,9 +577,9 @@ TextureImporter:
       name: Streets_18
       rect:
         serializedVersion: 2
-        x: 513
-        y: 0
-        width: 126
+        x: 512
+        y: 128
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -595,9 +598,9 @@ TextureImporter:
       name: Streets_19
       rect:
         serializedVersion: 2
-        x: 641
-        y: 0
-        width: 126
+        x: 640
+        y: 128
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -616,9 +619,9 @@ TextureImporter:
       name: Streets_20
       rect:
         serializedVersion: 2
-        x: 769
-        y: 0
-        width: 126
+        x: 768
+        y: 128
+        width: 128
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -629,6 +632,48 @@ TextureImporter:
       bones: []
       spriteID: fb68bd43fa2f491f0800000000000000
       internalID: -1038938779695741249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Streets_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1f0523d4bb981450800000000000000
+      internalID: 6059764499565842204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Streets_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9baa9a5d0fa9f6ed0800000000000000
+      internalID: -2418544115707172167
       vertices: []
       indices: 
       edges: []

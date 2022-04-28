@@ -20,6 +20,18 @@ TextureImporter:
   - first:
       213: -5508126076032643721
     second: Comercias 256_5
+  - first:
+      213: 7025923106658347727
+    second: Comercias 256_6
+  - first:
+      213: 2522633291109226233
+    second: Comercias 256_7
+  - first:
+      213: 4320931161827564153
+    second: Comercias 256_8
+  - first:
+      213: -676246993866307612
+    second: Comercias 256_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -232,8 +244,8 @@ TextureImporter:
       name: Comercias 256_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 1024
+        y: 256
         width: 256
         height: 256
       alignment: 7
@@ -253,7 +265,7 @@ TextureImporter:
       name: Comercias 256_5
       rect:
         serializedVersion: 2
-        x: 256
+        x: 0
         y: 0
         width: 256
         height: 256
@@ -266,6 +278,90 @@ TextureImporter:
       bones: []
       spriteID: 77d020464843f83b0800000000000000
       internalID: -5508126076032643721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Comercias 256_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fca649f27d7118160800000000000000
+      internalID: 7025923106658347727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Comercias 256_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6d32fdc91320320800000000000000
+      internalID: 2522633291109226233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Comercias 256_8
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ad5a79ff707fb30800000000000000
+      internalID: 4320931161827564153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Comercias 256_9
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e74c2621fc7d96f0800000000000000
+      internalID: -676246993866307612
       vertices: []
       indices: 
       edges: []
