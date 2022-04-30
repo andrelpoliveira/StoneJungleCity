@@ -124,15 +124,15 @@ public class SlotController : MonoBehaviour
         }
         else
         {
-            fillAmount = tempTime / _Slots.slotTimeProduction;
+            fillAmount = tempTime / (_Slots.slotTimeProduction / _GameController.reductionBonus / _GameController.reductionBonusTemp);
         }
 
         loadBar.fillAmount = fillAmount;
 
-        if(tempTime >= _Slots.slotTimeProduction)
+        if(tempTime >= _Slots.slotTimeProduction / _GameController.reductionBonus / _GameController.reductionBonusTemp)
         {
             tempTime = 0;
-            coin += _Slots.slotProduction;
+            coin += _Slots.slotProduction * _GameController.multiplierBonus * _GameController.multiplierBonusTemp;
             xp += _Slots.xpProduction;
             productionTxt.text = _GameController.currencyConverterCoin(coin);
         }
