@@ -10,28 +10,28 @@ TextureImporter:
     second: Comercias 256_1
   - first:
       213: 1997025802980429008
-    second: Comercias 256_2
+    second: Posto
   - first:
       213: 4528461403002286288
-    second: Comercias 256_3
+    second: PostoSombra
   - first:
       213: 7875952820178557220
-    second: Comercias 256_4
+    second: Bolsa de Valores
   - first:
       213: -5508126076032643721
-    second: Comercias 256_5
+    second: Bolsa de Valores Sombra
   - first:
       213: 7025923106658347727
-    second: Comercias 256_6
+    second: Comercial Trade
   - first:
       213: 2522633291109226233
-    second: Comercias 256_7
+    second: Comercial Trade Sombra
   - first:
       213: 4320931161827564153
-    second: Comercias 256_8
+    second: Contabil
   - first:
       213: -676246993866307612
-    second: Comercias 256_9
+    second: Contabil Sombra
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -199,7 +199,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Comercias 256_2
+      name: Posto
       rect:
         serializedVersion: 2
         x: 512
@@ -220,7 +220,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Comercias 256_3
+      name: PostoSombra
       rect:
         serializedVersion: 2
         x: 768
@@ -241,7 +241,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Comercias 256_4
+      name: Bolsa de Valores
       rect:
         serializedVersion: 2
         x: 1024
@@ -262,7 +262,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Comercias 256_5
+      name: Bolsa de Valores Sombra
       rect:
         serializedVersion: 2
         x: 0
@@ -283,7 +283,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Comercias 256_6
+      name: Comercial Trade
       rect:
         serializedVersion: 2
         x: 256
@@ -304,7 +304,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Comercias 256_7
+      name: Comercial Trade Sombra
       rect:
         serializedVersion: 2
         x: 512
@@ -325,7 +325,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Comercias 256_8
+      name: Contabil
       rect:
         serializedVersion: 2
         x: 768
@@ -346,7 +346,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Comercias 256_9
+      name: Contabil Sombra
       rect:
         serializedVersion: 2
         x: 1024

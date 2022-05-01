@@ -16,7 +16,7 @@ MonoBehaviour:
   cardName: Escola Primaria
   spriteCard: {fileID: 21300000, guid: 6ec791308be4a0349aa1cf182e824486, type: 3}
   shadowCard: {fileID: 21300000, guid: 184699c9745880840b732c18c2442f1b, type: 3}
-  rarityCard: 0
+  rarityCard: 1
   isLiberate: 0
   levelCard: 1
   production: 213

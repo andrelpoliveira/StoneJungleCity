@@ -16,7 +16,7 @@ MonoBehaviour:
   cardName: Bolsa de Valores
   spriteCard: {fileID: 7875952820178557220, guid: f913aacba2837ba42b2c5c2f92498d5d, type: 3}
   shadowCard: {fileID: -5508126076032643721, guid: f913aacba2837ba42b2c5c2f92498d5d, type: 3}
-  rarityCard: 0
+  rarityCard: 1
   isLiberate: 0
   levelCard: 1
   production: 800

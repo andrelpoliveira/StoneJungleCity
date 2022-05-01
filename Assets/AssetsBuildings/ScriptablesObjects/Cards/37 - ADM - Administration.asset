@@ -16,8 +16,8 @@ MonoBehaviour:
   cardName: "Administra\xE7\xE3o"
   spriteCard: {fileID: 21300000, guid: a8c6bfd1a0ca28f4ea10eabafe27b88f, type: 3}
   shadowCard: {fileID: 21300000, guid: 382a031365ee2714eb6c514a7fb9768d, type: 3}
-  rarityCard: 0
-  isLiberate: 0
+  rarityCard: 1
+  isLiberate: 1
   levelCard: 1
   production: 185
   timeProduction: 14
