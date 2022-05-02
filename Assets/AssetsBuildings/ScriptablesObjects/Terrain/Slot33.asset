@@ -19,13 +19,13 @@ MonoBehaviour:
   isPurchased: 0
   isMax: 0
   isAutoProduction: 0
-  slotPrice: 560
-  slotProduction: 106
-  xpProduction: 106
-  slotTimeProduction: 12
+  slotPrice: 1200
+  slotProduction: 200
+  xpProduction: 35
+  slotTimeProduction: 36
   slotLevel: 1
   upgrades: 0
   totalUpgrades: 0
-  upgradePrice: 0
+  upgradePrice: 159
   slotProductionMultiplier: 1
   slotProductionReduction: 1

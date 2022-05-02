@@ -20,7 +20,7 @@ MonoBehaviour:
   isLiberate: 0
   levelCard: 1
   production: 60
-  timeProduction: 2
+  timeProduction: 10
   productionMultiplier: 1
   productionReduction: 1
   isMax: 0

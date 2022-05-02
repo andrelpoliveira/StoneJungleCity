@@ -17,10 +17,10 @@ MonoBehaviour:
   spriteCard: {fileID: 21300000, guid: 41ae319d2f351054eb906860b0f14aa2, type: 3}
   shadowCard: {fileID: 21300000, guid: 1447a6991bfff0047826972e8b63c080, type: 3}
   rarityCard: 1
-  isLiberate: 1
+  isLiberate: 0
   levelCard: 1
-  production: 122
-  timeProduction: 12
+  production: 600
+  timeProduction: 72
   productionMultiplier: 1
   productionReduction: 1
   isMax: 0
