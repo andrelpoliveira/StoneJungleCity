@@ -22,12 +22,17 @@ public class GameController : MonoBehaviour
     private SlotController[] _SlotController;
     private SlotController  slotcontrol;
 
-    [Header("Gerenciamento Sprites HUD")]
+    [Header("Gerenciamento HUD")]
     public Sprite[]         icoCoin; //0 - Moeda Inativa, 1 - Moeda Ativa
     public Sprite[]         slotBg;  //0 - Inativo, 1 - Ativo
     public Sprite[]         bgUpgrade; // 0- inativo, 1 Ativo, 2 Maximizado
     public Color[]          colorText; // 0 - inativa, 1 - ativa
+    public Sprite[]         bg_card;    //0 - COMUM, 1 - RARA, 2 - ÉPICO, 3 - LENDÁRIA, 4 - NÃO TEM
 
+    public CardCollection[] slot_collection;
+
+
+    [Space]
     [Header("HUD Gameplay")]
     public GameObject       panelGamePlay;
     public GameObject       panelFume;
@@ -45,19 +50,24 @@ public class GameController : MonoBehaviour
     [TextArea]
     public string[]         questDescription;   //Descrição da Quest
 
+    [Space]
     [Header("CUT Compra")]
     public GameObject       panelBuy;
     public Text             buyDescriptiontxt;
     public Image            icoBuild;
 
+    [Space]
     [Header("HUD Botões")]
     public GameObject       btnUpgrade;
     public GameObject       btnCollections;
+    public GameObject       panel_collection;
 
+    [Space]
     [Header("Scriptables")]
     public Card[]           cards;
     public Slots[]          slots;
 
+    [Space]
     [Header("Prefabs")]
     public GameObject       coinPrefab;
     public GameObject       textPrefab;
@@ -67,6 +77,7 @@ public class GameController : MonoBehaviour
     public GameObject       textgemPrefab;
 
     //Variáveis de GamePlay
+    [Space]
     [Header("Variáveis GamePlay")]
     public GameState        currentState;
     [SerializeField]
@@ -78,8 +89,9 @@ public class GameController : MonoBehaviour
     public string[]         accumulated;
     public int[]            progressSlot;
     public float            delayLoopUpgrade, delayBetweenUpgrade;
+    public int[]            progress_card;
 
-
+    [Space]
     [Header("Bônus de GamePlay")]
     public int              multiplierBonus;
     public int              multiplierBonusTemp;
@@ -95,6 +107,7 @@ public class GameController : MonoBehaviour
         barXp.fillAmount = 0;
         panelFume.SetActive(false);
         panelQuest.SetActive(false);
+        panel_collection.SetActive(false);
 
         // Teste se está em quest
         if (isQuest == true) { panelQuest.SetActive(true); }
@@ -349,5 +362,34 @@ public class GameController : MonoBehaviour
         panelBuy.SetActive(false);
         panelFume.SetActive(false);
         panelGamePlay.SetActive(true);
+    }
+
+    public void GetBooster(int id_booster)
+    {
+
+    }
+
+    public void OpenCollection()
+    {
+        switch (currentState)
+        {
+            case GameState.GAMEPLAY:
+                UpgradeCollection();
+                changeGameState(GameState.COLLECTION);
+                panelFume.SetActive(true);
+                panel_collection.SetActive(true);
+                break;
+
+            case GameState.COLLECTION:
+                changeGameState(GameState.GAMEPLAY);
+                panelFume.SetActive(false);
+                panel_collection.SetActive(false);
+                break;
+        }
+    }
+
+    void UpgradeCollection()
+    {
+
     }
 }

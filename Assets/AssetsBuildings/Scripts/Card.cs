@@ -3,11 +3,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Card", menuName = "Collection/Card")]
 public class Card : ScriptableObject
 {
-    // enum para tipo da carta
-    public enum type_card
-    {
-        COMMON, RARE, EPIC, LEGENDARY
-    }
 
     [Header("Informações fixas")]
     public int      idCard;
@@ -20,6 +15,7 @@ public class Card : ScriptableObject
     [Header("Dados iniciais")]
     public bool     isLiberate;
     public int      levelCard = 1;
+    public int      card_collected;
     public double   production;
     public float    timeProduction;
 
@@ -32,6 +28,7 @@ public class Card : ScriptableObject
     {
         if(idCard == 0) { isLiberate = true; } else { isLiberate = false; }
         levelCard = 1;
+        card_collected = 0;
         productionMultiplier = 1;
         productionReduction = 1;
         isMax = false;
