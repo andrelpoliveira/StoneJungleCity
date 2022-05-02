@@ -21,11 +21,11 @@ MonoBehaviour:
   isAutoProduction: 0
   slotPrice: 360
   slotProduction: 60
-  xpProduction: 15
-  slotTimeProduction: 2
+  xpProduction: 8
+  slotTimeProduction: 10
   slotLevel: 1
   upgrades: 0
   totalUpgrades: 0
-  upgradePrice: 0
+  upgradePrice: 90
   slotProductionMultiplier: 1
   slotProductionReduction: 1

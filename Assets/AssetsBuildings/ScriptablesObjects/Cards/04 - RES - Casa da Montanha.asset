@@ -16,11 +16,11 @@ MonoBehaviour:
   cardName: Casa da Montanha
   spriteCard: {fileID: 21300000, guid: 68a2f8aaabbe07a43bf3a9350d163345, type: 3}
   shadowCard: {fileID: 21300000, guid: 40cedeaf70d93624ca79afa88ad60c41, type: 3}
-  rarityCard: 0
+  rarityCard: 1
   isLiberate: 0
   levelCard: 1
-  production: 8
-  timeProduction: 8
+  production: 30
+  timeProduction: 24
   productionMultiplier: 1
   productionReduction: 1
   isMax: 0

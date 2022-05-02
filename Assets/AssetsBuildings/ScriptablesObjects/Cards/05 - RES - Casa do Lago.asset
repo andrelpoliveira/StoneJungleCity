@@ -19,8 +19,8 @@ MonoBehaviour:
   rarityCard: 0
   isLiberate: 0
   levelCard: 1
-  production: 15
-  timeProduction: 8
+  production: 60
+  timeProduction: 84
   productionMultiplier: 1
   productionReduction: 1
   isMax: 0

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public enum GameState
 {
@@ -36,15 +37,15 @@ public class GameController : MonoBehaviour
     [Header("HUD Gameplay")]
     public GameObject       panelGamePlay;
     public GameObject       panelFume;
-    public Text             coinTxt;
-    public Text             gemsTxt;
-    public Text             xpTxt;
+    public TextMeshProUGUI  coinTxt;
+    public TextMeshProUGUI  gemsTxt;
+    public TextMeshProUGUI  xpTxt;
     public Image            barXp;
-    public Text             lvlTxt;
+    public TextMeshProUGUI  lvlTxt;
     public int[]            xpMax;
 
     public GameObject       panelQuest;
-    public Text             questTxt;
+    public TextMeshProUGUI  questTxt;
     public bool             isQuest;    //Booleana para verificar se está em quest
     public int              idQuest;     //Indice da quest atual
     [TextArea]
@@ -53,7 +54,7 @@ public class GameController : MonoBehaviour
     [Space]
     [Header("CUT Compra")]
     public GameObject       panelBuy;
-    public Text             buyDescriptiontxt;
+    public TextMeshProUGUI  buyDescriptiontxt;
     public Image            icoBuild;
 
     [Space]
@@ -344,7 +345,7 @@ public class GameController : MonoBehaviour
         panelFume.SetActive(true);
 
         icoBuild.sprite = s.slotCard.spriteCard;
-        buyDescriptiontxt.text = "Você liberou <color=#00FFFF>" + s.slotCard.cardName + "</color>";
+        buyDescriptiontxt.text = "Liberou <color=#00FFFF>" + s.slotCard.cardName + "</color>";
 
         panelBuy.SetActive(true);
 

@@ -16,11 +16,11 @@ MonoBehaviour:
   cardName: Comercial Trade
   spriteCard: {fileID: 7025923106658347727, guid: f913aacba2837ba42b2c5c2f92498d5d, type: 3}
   shadowCard: {fileID: 2522633291109226233, guid: f913aacba2837ba42b2c5c2f92498d5d, type: 3}
-  rarityCard: 1
+  rarityCard: 2
   isLiberate: 0
   levelCard: 1
-  production: 780
-  timeProduction: 10
+  production: 207000
+  timeProduction: 500
   productionMultiplier: 1
   productionReduction: 1
   isMax: 0

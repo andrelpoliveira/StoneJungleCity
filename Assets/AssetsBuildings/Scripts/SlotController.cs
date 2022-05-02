@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SlotController : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class SlotController : MonoBehaviour
     [Header("Painel Compra")]
     public GameObject       panelPurchase;
     public Image            iconCoinPurchase;
-    public Text             pricePurchaseTxt;
+    public TextMeshProUGUI  pricePurchaseTxt;
 
     [Header("HUD Terrain")]
     public GameObject       huds;
@@ -25,16 +26,16 @@ public class SlotController : MonoBehaviour
     public GameObject       panelProduction;
     public Image            icoCoinProduction;
     public Image            loadBar;
-    public Text             productionTxt;
+    public TextMeshProUGUI  productionTxt;
 
     [Header("HUD Upgrade")]
     public GameObject       panelUpgrade;
     public Image            bgUpgrade;
     public Image            progressBar;
-    public Text             progressTxt;
+    public TextMeshProUGUI  progressTxt;
     public Image            icoCoinUpgrade;
-    public Text             priceUpgradeTxt;
-    public Text             slotLevelTxt;
+    public TextMeshProUGUI  priceUpgradeTxt;
+    public TextMeshProUGUI  slotLevelTxt;
 
     [Header("Slots GamePlay")]
     public Slots            _Slots;

@@ -16,12 +16,12 @@ MonoBehaviour:
   idSlot: 1
   slotCard: {fileID: 11400000, guid: 57aada1aac5c3104d9366c31007c02b3, type: 2}
   initialCard: {fileID: 11400000, guid: 57aada1aac5c3104d9366c31007c02b3, type: 2}
-  isPurchased: 1
+  isPurchased: 0
   isMax: 0
   isAutoProduction: 0
   slotPrice: 10
-  slotProduction: 5
-  xpProduction: 5
+  slotProduction: 2
+  xpProduction: 2
   slotTimeProduction: 3
   slotLevel: 1
   upgrades: 0

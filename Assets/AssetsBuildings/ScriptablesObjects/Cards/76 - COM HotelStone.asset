@@ -16,11 +16,11 @@ MonoBehaviour:
   cardName: Hotel Stone
   spriteCard: {fileID: 93120518309403720, guid: 9ff80ec561f4b8342b91484f0187abdc, type: 3}
   shadowCard: {fileID: 2383680272742229277, guid: 9ff80ec561f4b8342b91484f0187abdc, type: 3}
-  rarityCard: 1
+  rarityCard: 2
   isLiberate: 0
   levelCard: 1
-  production: 1280
-  timeProduction: 16
+  production: 203000000
+  timeProduction: 800
   productionMultiplier: 1
   productionReduction: 1
   isMax: 0

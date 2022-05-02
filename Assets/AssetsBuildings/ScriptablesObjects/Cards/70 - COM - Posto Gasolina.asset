@@ -16,11 +16,11 @@ MonoBehaviour:
   cardName: Posto de Gasolina
   spriteCard: {fileID: 1997025802980429008, guid: f913aacba2837ba42b2c5c2f92498d5d, type: 3}
   shadowCard: {fileID: 4528461403002286288, guid: f913aacba2837ba42b2c5c2f92498d5d, type: 3}
-  rarityCard: 1
+  rarityCard: 0
   isLiberate: 0
   levelCard: 1
-  production: 1800
-  timeProduction: 18
+  production: 34600
+  timeProduction: 440
   productionMultiplier: 1
   productionReduction: 1
   isMax: 0
