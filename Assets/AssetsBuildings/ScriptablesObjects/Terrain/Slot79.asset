@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2dbf2c573332423448d5faf206cecfda, type: 3}
-  m_Name: Slot38
+  m_Name: Slot79
   m_EditorClassIdentifier: 
   _GameController: {fileID: 0}
-  idSlot: 38
-  slotCard: {fileID: 11400000, guid: ba3da01a48048114e93ccd1ef0202cfb, type: 2}
-  initialCard: {fileID: 11400000, guid: ba3da01a48048114e93ccd1ef0202cfb, type: 2}
+  idSlot: 79
+  slotCard: {fileID: 11400000, guid: c73b279163bdf3d43af967640649be2c, type: 2}
+  initialCard: {fileID: 11400000, guid: c73b279163bdf3d43af967640649be2c, type: 2}
   isPurchased: 0
   isMax: 0
   isAutoProduction: 0
-  slotPrice: 194400
-  slotProduction: 32400
-  xpProduction: 38
-  slotTimeProduction: 320
+  slotPrice: 99574272000
+  slotProduction: 24900000000
+  xpProduction: 280
+  slotTimeProduction: 960
   slotLevel: 1
   upgrades: 0
   totalUpgrades: 0
