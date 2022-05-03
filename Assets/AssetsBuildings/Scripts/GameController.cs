@@ -18,6 +18,7 @@ public enum Rarity
 public class GameController : MonoBehaviour
 {
     public bool             isReset;
+    public bool             is_organization;
 
     [SerializeField]
     private SlotController[] _SlotController;
@@ -67,6 +68,15 @@ public class GameController : MonoBehaviour
     [Header("Scriptables")]
     public Card[]           cards;
     public Slots[]          slots;
+
+    [HideInInspector]
+    public List<Card> card_common;
+    [HideInInspector]
+    public List<Card> card_rare;
+    [HideInInspector]
+    public List<Card> card_epic;
+    [HideInInspector]
+    public List<Card> card_legendary;
 
     [Space]
     [Header("Prefabs")]
@@ -122,6 +132,28 @@ public class GameController : MonoBehaviour
             s._Slots._GameController = this;
 
             s.StartSlot();
+        }
+
+        foreach (Card c in cards)
+        {
+            switch (c.rarityCard)
+            {
+                case Rarity.COMMOM:
+                    card_common.Add(c);
+                    break;
+
+                case Rarity.RARE:
+                    card_rare.Add(c);
+                    break;
+
+                case Rarity.EPIC:
+                    card_epic.Add(c);
+                    break;
+
+                case Rarity.LEGEND:
+                    card_legendary.Add(c);
+                    break;
+            }
         }
     }
 
@@ -391,6 +423,62 @@ public class GameController : MonoBehaviour
 
     void UpgradeCollection()
     {
+        int i = 0;
 
+        if (!is_organization)
+        {
+
+            foreach (Card c in cards)
+            {
+                if (slot_collection[i]._GameController == null) { slot_collection[i]._GameController = this; }
+                if (slot_collection[i]._Card == null) { slot_collection[i]._Card = c; }
+
+                slot_collection[i].UpgradeInfoCard();
+                slot_collection[i].gameObject.SetActive(true);
+                i++;
+            }
+        }
+        else // Organiza cartas por raridade, precisa ativar
+        {
+            foreach (Card c in card_common)
+            {
+                if (slot_collection[i]._GameController == null) { slot_collection[i]._GameController = this; }
+                if (slot_collection[i]._Card == null) { slot_collection[i]._Card = c; }
+
+                slot_collection[i].UpgradeInfoCard();
+                slot_collection[i].gameObject.SetActive(true);
+                i++;
+            }
+
+            foreach (Card c in card_rare)
+            {
+                if (slot_collection[i]._GameController == null) { slot_collection[i]._GameController = this; }
+                if (slot_collection[i]._Card == null) { slot_collection[i]._Card = c; }
+
+                slot_collection[i].UpgradeInfoCard();
+                slot_collection[i].gameObject.SetActive(true);
+                i++;
+            }
+
+            foreach (Card c in card_epic)
+            {
+                if (slot_collection[i]._GameController == null) { slot_collection[i]._GameController = this; }
+                if (slot_collection[i]._Card == null) { slot_collection[i]._Card = c; }
+
+                slot_collection[i].UpgradeInfoCard();
+                slot_collection[i].gameObject.SetActive(true);
+                i++;
+            }
+
+            foreach (Card c in card_legendary)
+            {
+                if (slot_collection[i]._GameController == null) { slot_collection[i]._GameController = this; }
+                if (slot_collection[i]._Card == null) { slot_collection[i]._Card = c; }
+
+                slot_collection[i].UpgradeInfoCard();
+                slot_collection[i].gameObject.SetActive(true);
+                i++;
+            }
+        }
     }
 }
