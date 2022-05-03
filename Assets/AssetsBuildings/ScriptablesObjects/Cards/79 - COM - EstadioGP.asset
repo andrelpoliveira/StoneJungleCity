@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f7e78994f4bba24fbc9ec0bb67a00ec, type: 3}
-  m_Name: 78 - COM - EstudioIndie
+  m_Name: 79 - COM - EstadioGP
   m_EditorClassIdentifier: 
   idCard: 78
-  cardName: "Est\xFAdio Indie"
-  spriteCard: {fileID: 2100550725137660750, guid: 9ff80ec561f4b8342b91484f0187abdc, type: 3}
-  shadowCard: {fileID: 9102767708818184946, guid: 9ff80ec561f4b8342b91484f0187abdc, type: 3}
+  cardName: "Est\xE1dio GP"
+  spriteCard: {fileID: -4473800961544722047, guid: 7157771f3084d7147854a477266f0dca, type: 3}
+  shadowCard: {fileID: -4200421145502261395, guid: 7157771f3084d7147854a477266f0dca, type: 3}
   rarityCard: 3
   isLiberate: 0
   levelCard: 1
-  production: 3560000000
-  timeProduction: 920
+  production: 24900000000
+  timeProduction: 960
   productionMultiplier: 1
   productionReduction: 1
   isMax: 0

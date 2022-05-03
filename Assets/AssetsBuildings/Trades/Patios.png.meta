@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: c228b4ad3079d4a4e8786ce9fb2298a3
+guid: edcd44e02b152fc4081bee464c3632c4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3837298753235069804
-    second: Comercial Padrao
+      213: -2874164856607159300
+    second: Parquepp2
   - first:
-      213: 6930541387142776
-    second: Comercial Padrao Sombra
+      213: -7690233993264570684
+    second: Parquepp3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -50,8 +50,8 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 7
-  spritePivot: {x: 0.5, y: 0}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -133,13 +133,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Comercial Padrao
+      name: Parquepp2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 128
-        height: 256
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6b20ab92e2d04530800000000000000
-      internalID: 3837298753235069804
+      spriteID: cfbc4087a4aec18d0800000000000000
+      internalID: -2874164856607159300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Comercial Padrao Sombra
+      name: Parquepp3
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 128
-        height: 256
+        height: 128
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,8 +168,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8765b796a4f981000800000000000000
-      internalID: 6930541387142776
+      spriteID: 4ced4df7decc64590800000000000000
+      internalID: -7690233993264570684
       vertices: []
       indices: 
       edges: []
