@@ -20,9 +20,9 @@ MonoBehaviour:
   isMax: 0
   isAutoProduction: 0
   slotPrice: 300
-  slotProduction: 50
+  slotProduction: 25
   xpProduction: 8
-  slotTimeProduction: 9
+  slotTimeProduction: 3
   slotLevel: 1
   upgrades: 0
   totalUpgrades: 0

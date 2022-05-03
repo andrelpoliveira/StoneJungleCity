@@ -20,7 +20,7 @@ MonoBehaviour:
   isMax: 0
   isAutoProduction: 0
   slotPrice: 194400
-  slotProduction: 38880
+  slotProduction: 38900
   xpProduction: 32
   slotTimeProduction: 576
   slotLevel: 1
