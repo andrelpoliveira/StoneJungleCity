@@ -25,6 +25,7 @@ public class GameController : MonoBehaviour
     private SlotController  slotcontrol;
 
     [Header("Gerenciamento HUD")]
+    public Sprite           ico_gem;
     public Sprite[]         icoCoin; //0 - Moeda Inativa, 1 - Moeda Ativa
     public Sprite[]         slotBg;  //0 - Inativo, 1 - Ativo
     public Sprite[]         bgUpgrade; // 0- inativo, 1 Ativo, 2 Maximizado
@@ -480,5 +481,15 @@ public class GameController : MonoBehaviour
                 i++;
             }
         }
+    }
+
+    public double getCoinAccumulated()
+    {
+        return coinsAccumulated;
+    }
+
+    public double getGemsAccumulated()
+    {
+        return gemsAccumulated;
     }
 }
