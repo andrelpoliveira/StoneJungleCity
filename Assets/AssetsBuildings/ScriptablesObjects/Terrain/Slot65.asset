@@ -16,7 +16,7 @@ MonoBehaviour:
   idSlot: 65
   slotCard: {fileID: 11400000, guid: 7044c47b55075ad48b089691d2d1633c, type: 2}
   initialCard: {fileID: 11400000, guid: 7044c47b55075ad48b089691d2d1633c, type: 2}
-  isPurchased: 1
+  isPurchased: 0
   isMax: 0
   isAutoProduction: 0
   slotPrice: 2880

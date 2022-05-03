@@ -22,7 +22,7 @@ MonoBehaviour:
   slotPrice: 180
   slotProduction: 30
   xpProduction: 10
-  slotTimeProduction: 84
+  slotTimeProduction: 24
   slotLevel: 1
   upgrades: 0
   totalUpgrades: 0
