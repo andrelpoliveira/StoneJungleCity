@@ -93,7 +93,6 @@ public class GameController : MonoBehaviour
     public GameObject       gemPrefab;
     public GameObject       textgemPrefab;
 
-    //Variáveis de GamePlay
     [Space]
     [Header("Variáveis GamePlay")]
     public GameState        currentState;
@@ -107,6 +106,7 @@ public class GameController : MonoBehaviour
     public int[]            progressSlot;
     public float            delayLoopUpgrade, delayBetweenUpgrade;
     public int[]            progress_card;
+    public double[]         max_reward_rarity;
 
     [Space]
     [Header("Bônus de GamePlay")]
@@ -532,7 +532,73 @@ public class GameController : MonoBehaviour
     {
         if(!c.isLiberate) { c.isLiberate = true; }
 
-        c.card_collected += qtd;
+        if (!c.isMax)
+        {
+            c.card_collected += qtd;
+            
+            if(c.card_collected >= progress_card[c.levelCard - 1])
+            {
+                int dif = c.card_collected - progress_card[c.levelCard - 1];
+                c.card_collected = dif;
+                c.levelCard += 1;
+
+                switch (c.levelCard)
+                {
+                    case 2:
+                        c.productionMultiplier = 5;
+                        break;
+
+                    case 3:
+                        c.productionReduction = 5;
+                        c.isMax = true;
+
+                        if(dif > 0) { MaxRewardRarity(c.rarityCard); }
+                        
+                        c.card_collected = 0;
+                        break;
+                }
+
+                UpdateSlot();
+            }
+        }
+        else
+        {
+            // Recompensa por carta maximizada
+            MaxRewardRarity(c.rarityCard);
+        }
+        
         UpgradeCollection();
+    }
+
+    void MaxRewardRarity(Rarity r)
+    {
+        switch (r)
+        {
+            case Rarity.COMMOM:
+                getCoin(max_reward_rarity[0]);
+                break;
+
+            case Rarity.RARE:
+                getCoin(max_reward_rarity[1]);
+                break;
+
+            case Rarity.EPIC:
+                getCoin(max_reward_rarity[2]);
+                break;
+
+            case Rarity.LEGEND:
+                getCoin(max_reward_rarity[3]);
+                break;
+        }
+    }
+    
+    void UpdateSlot()
+    {
+        foreach (Slots s in slots)
+        {
+            if(s._GameController == null) { s._GameController = this; }
+
+            s.StartSlotsScriptable();
+        }
     }
 }
