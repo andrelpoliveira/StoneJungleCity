@@ -6,11 +6,13 @@ using TMPro;
 
 public class RewardInfo : MonoBehaviour
 {
+    [HideInInspector]
     public GameController _GameController;
 
     public Image ico_reward;
     public Image bg_reward;
     public TMP_Text reward_description;
+    [HideInInspector]
     public Card _Card;
 
     private double qtd;
@@ -27,7 +29,7 @@ public class RewardInfo : MonoBehaviour
                 _GameController.getCoin(qtd);
                 ico_reward.sprite = _GameController.icoCoin[1];
                 bg_reward.sprite = _GameController.bg_card[1];
-                reward_description.text = _GameController.currencyConverterCoin(qtd) + "Moedas";
+                reward_description.text = _GameController.currencyConverterCoin(qtd) + " Moedas";
                 break;
 
             case 1:
@@ -35,10 +37,33 @@ public class RewardInfo : MonoBehaviour
                 _GameController.getGems((int)qtd);
                 ico_reward.sprite = _GameController.ico_gem;
                 bg_reward.sprite = _GameController.bg_card[0];
-                reward_description.text = qtd.ToString() + "Gemas";
+                reward_description.text = qtd.ToString() + " Gemas";
                 break;
 
             case 2:
+                qtd = 1;
+                _GameController.getCard(_Card, (int)qtd);
+                ico_reward.sprite = _Card.spriteCard;
+                reward_description.text = qtd.ToString() + " " + _Card.cardName;
+
+                switch (_Card.rarityCard)
+                {
+                    case Rarity.COMMOM:
+                        bg_reward.sprite = _GameController.bg_card[0];
+                        break;
+
+                    case Rarity.RARE:
+                        bg_reward.sprite = _GameController.bg_card[1];
+                        break;
+
+                    case Rarity.EPIC:
+                        bg_reward.sprite = _GameController.bg_card[2];
+                        break;
+
+                    case Rarity.LEGEND:
+                        bg_reward.sprite = _GameController.bg_card[3];
+                        break;
+                }
                 break;
         }
     }

@@ -6,7 +6,7 @@ using TMPro;
 
 public enum GameState
 {
-    GAMEPLAY, COLLECTION, UPGRADE, CUT
+    GAMEPLAY, COLLECTION, UPGRADE, CUT, BOOSTER
 }
 
 public enum Rarity
@@ -58,6 +58,11 @@ public class GameController : MonoBehaviour
     public GameObject       panelBuy;
     public TextMeshProUGUI  buyDescriptiontxt;
     public Image            icoBuild;
+
+    [Space]
+    [Header("HUD Booster")]
+    public GameObject panel_open_booster;
+    public OpenSuitCase _OpenSuitCase;
 
     [Space]
     [Header("HUD Botões")]
@@ -120,6 +125,8 @@ public class GameController : MonoBehaviour
         panelFume.SetActive(false);
         panelQuest.SetActive(false);
         panel_collection.SetActive(false);
+        panel_open_booster.SetActive(false);
+        _OpenSuitCase._GameController = this;
 
         // Teste se está em quest
         if (isQuest == true) { panelQuest.SetActive(true); }
@@ -400,7 +407,35 @@ public class GameController : MonoBehaviour
 
     public void GetBooster(int id_booster)
     {
+        switch (id_booster)
+        {
+            case 0: // Maleta Comun
+                _OpenSuitCase.suit_rarity = Rarity.COMMOM;
+                _OpenSuitCase.qtd_rewards = 3;
+                _OpenSuitCase.Start();
+                break;
 
+            case 1: // Maleta Rara
+                _OpenSuitCase.suit_rarity = Rarity.RARE;
+                _OpenSuitCase.qtd_rewards = 5;
+                _OpenSuitCase.Start();
+                break;
+
+            case 2: // Maleta Épica
+                _OpenSuitCase.suit_rarity = Rarity.EPIC;
+                _OpenSuitCase.qtd_rewards = 7;
+                _OpenSuitCase.Start();
+                break;
+
+            case 3: // Maleta Lendária
+                _OpenSuitCase.suit_rarity = Rarity.LEGEND;
+                _OpenSuitCase.qtd_rewards = 10;
+                _OpenSuitCase.Start();
+                break;
+        }
+
+        changeGameState(GameState.BOOSTER);
+        panel_open_booster.SetActive(true);
     }
 
     public void OpenCollection()
@@ -491,5 +526,13 @@ public class GameController : MonoBehaviour
     public double getGemsAccumulated()
     {
         return gemsAccumulated;
+    }
+
+    public void getCard(Card c, int qtd)
+    {
+        if(!c.isLiberate) { c.isLiberate = true; }
+
+        c.card_collected += qtd;
+        UpgradeCollection();
     }
 }
