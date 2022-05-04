@@ -61,8 +61,9 @@ public class GameController : MonoBehaviour
 
     [Space]
     [Header("HUD Booster")]
-    public GameObject panel_open_booster;
-    public OpenSuitCase _OpenSuitCase;
+    public GameObject       panel_open_booster;
+    public OpenSuitCase     _OpenSuitCase;
+    public TMP_Text         booster_price_txt;
 
     [Space]
     [Header("HUD Botões")]
@@ -107,6 +108,9 @@ public class GameController : MonoBehaviour
     public float            delayLoopUpgrade, delayBetweenUpgrade;
     public int[]            progress_card;
     public double[]         max_reward_rarity;
+    public int              qtd_suit_common;
+    public double           suit_price;
+    public int[]            suit_price_gems;
 
     [Space]
     [Header("Bônus de GamePlay")]
@@ -163,6 +167,8 @@ public class GameController : MonoBehaviour
                     break;
             }
         }
+
+        booster_price_txt.text = currencyConverterCoin(suit_price);
     }
 
     public void getCoin(double qtdCoin)
@@ -348,6 +354,15 @@ public class GameController : MonoBehaviour
         return check;
     }
 
+    public bool checkGems(int qtd)
+    {
+        bool check = false;
+
+        if (gems >= qtd) { check = true; }
+
+        return check;
+    }
+
     public void changeGameState(GameState newState)
     {
         currentState = newState;
@@ -410,24 +425,39 @@ public class GameController : MonoBehaviour
         switch (id_booster)
         {
             case 0: // Maleta Comun
+                if (!checkCoin(suit_price)) { return; }
+
+                getCoin(suit_price * -1);
                 _OpenSuitCase.suit_rarity = Rarity.COMMOM;
                 _OpenSuitCase.qtd_rewards = 3;
                 _OpenSuitCase.Start();
+                qtd_suit_common += 1;
+                suit_price = (suit_price * qtd_suit_common) + (float)coinsAccumulated / 2;
+                booster_price_txt.text = currencyConverterCoin(suit_price);
                 break;
 
             case 1: // Maleta Rara
+                if (!checkGems(suit_price_gems[0])) { return; }
+
+                getGems(suit_price_gems[0] * -1);
                 _OpenSuitCase.suit_rarity = Rarity.RARE;
                 _OpenSuitCase.qtd_rewards = 5;
                 _OpenSuitCase.Start();
                 break;
 
             case 2: // Maleta Épica
+                if (!checkGems(suit_price_gems[1])) { return; }
+
+                getGems(suit_price_gems[1] * -1);
                 _OpenSuitCase.suit_rarity = Rarity.EPIC;
                 _OpenSuitCase.qtd_rewards = 7;
                 _OpenSuitCase.Start();
                 break;
 
             case 3: // Maleta Lendária
+                if (!checkGems(suit_price_gems[2])) { return; }
+
+                getGems(suit_price_gems[2] * -1);
                 _OpenSuitCase.suit_rarity = Rarity.LEGEND;
                 _OpenSuitCase.qtd_rewards = 10;
                 _OpenSuitCase.Start();
