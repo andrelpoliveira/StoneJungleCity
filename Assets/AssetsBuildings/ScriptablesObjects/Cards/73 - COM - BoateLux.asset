@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 73
   cardName: Boate Lux
   spriteCard: {fileID: 21300000, guid: 43f9ba019fbe3ac4aa83e6e2babd865f, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: 43f9ba019fbe3ac4aa83e6e2babd865f, type: 3}
   shadowCard: {fileID: 21300000, guid: 192aabbd59114d447a8cc486c2ca9666, type: 3}
   rarityCard: 3
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 3630000
   timeProduction: 620
   productionMultiplier: 1

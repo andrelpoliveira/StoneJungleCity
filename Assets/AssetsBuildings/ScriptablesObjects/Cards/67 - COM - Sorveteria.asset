@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 67
   cardName: Sorveteria Plaza
   spriteCard: {fileID: 21300000, guid: 19efd347ec6f6dc43b4a0251187def62, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: 19efd347ec6f6dc43b4a0251187def62, type: 3}
   shadowCard: {fileID: 21300000, guid: 989d9760407117844ae6c11b71894de3, type: 3}
   rarityCard: 0
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 2880
   timeProduction: 40
   productionMultiplier: 1

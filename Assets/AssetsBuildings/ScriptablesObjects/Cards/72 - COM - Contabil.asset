@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 72
   cardName: Contabil
   spriteCard: {fileID: 4320931161827564153, guid: f913aacba2837ba42b2c5c2f92498d5d, type: 3}
+  initial_sprite_card: {fileID: 4320931161827564153, guid: f913aacba2837ba42b2c5c2f92498d5d, type: 3}
   shadowCard: {fileID: 21300000, guid: edd692a519de9154b9ac139742ff5e7a, type: 3}
   rarityCard: 0
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 346000
   timeProduction: 560
   productionMultiplier: 1

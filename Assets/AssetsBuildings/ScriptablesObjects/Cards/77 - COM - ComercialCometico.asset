@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 77
   cardName: "Comercial Cosm\xE9ticos"
   spriteCard: {fileID: -5650149770742614142, guid: 9ff80ec561f4b8342b91484f0187abdc, type: 3}
+  initial_sprite_card: {fileID: -5650149770742614142, guid: 9ff80ec561f4b8342b91484f0187abdc, type: 3}
   shadowCard: {fileID: -8880432222077337788, guid: 9ff80ec561f4b8342b91484f0187abdc, type: 3}
   rarityCard: 0
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 339000000
   timeProduction: 860
   productionMultiplier: 1

@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 10
   cardName: Casa Duplex Luxuosa
   spriteCard: {fileID: 21300000, guid: 12cb54c6d577b5f4f9153c8735187073, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: 12cb54c6d577b5f4f9153c8735187073, type: 3}
   shadowCard: {fileID: 21300000, guid: cb5c3c29e5af0ed4d85cf314777e4ec5, type: 3}
   rarityCard: 1
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 6480
   timeProduction: 516
   productionMultiplier: 1

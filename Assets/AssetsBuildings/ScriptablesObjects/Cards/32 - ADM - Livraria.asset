@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 32
   cardName: Livraria
   spriteCard: {fileID: 21300000, guid: 2d7478412044b094cb18ab9384077074, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: 2d7478412044b094cb18ab9384077074, type: 3}
   shadowCard: {fileID: 21300000, guid: 7fdb2eafaad14304ab56a2a99eb66d1d, type: 3}
   rarityCard: 0
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 50
   timeProduction: 9
   productionMultiplier: 1

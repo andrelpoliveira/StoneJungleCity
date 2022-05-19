@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 74
   cardName: Comercial Stone
   spriteCard: {fileID: -7549891986248490945, guid: 9ff80ec561f4b8342b91484f0187abdc, type: 3}
+  initial_sprite_card: {fileID: -7549891986248490945, guid: 9ff80ec561f4b8342b91484f0187abdc, type: 3}
   shadowCard: {fileID: -526020091043755756, guid: 9ff80ec561f4b8342b91484f0187abdc, type: 3}
   rarityCard: 3
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 25400000
   timeProduction: 680
   productionMultiplier: 1

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1069291079067",
+    "project_id": "stone-city-idle",
+    "storage_bucket": "stone-city-idle.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069291079067:android:78b239fdb97a4fc5cd0d3e",
+        "android_client_info": {
+          "package_name": "com.GuaruEstudio.StoneCityIdle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1069291079067-cohil45r9q3gkun8tj4cp4pdfqq4h445.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDa89ouf5xyipyjXgoOAD-LRGvX1nXRPGg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1069291079067-cohil45r9q3gkun8tj4cp4pdfqq4h445.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

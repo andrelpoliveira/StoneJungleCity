@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id">
+  <string name="gcm_defaultSenderId" translatable="false">1069291079067</string>
+  <string name="google_storage_bucket" translatable="false">stone-city-idle.appspot.com</string>
+  <string name="project_id" translatable="false">stone-city-idle</string>
+  <string name="google_api_key" translatable="false">AIzaSyDa89ouf5xyipyjXgoOAD-LRGvX1nXRPGg</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDa89ouf5xyipyjXgoOAD-LRGvX1nXRPGg</string>
+  <string name="google_app_id" translatable="false">1:1069291079067:android:78b239fdb97a4fc5cd0d3e</string>
+  <string name="default_web_client_id" translatable="false">1069291079067-cohil45r9q3gkun8tj4cp4pdfqq4h445.apps.googleusercontent.com</string>
+</resources>

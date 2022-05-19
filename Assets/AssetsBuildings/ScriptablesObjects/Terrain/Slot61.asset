@@ -19,6 +19,7 @@ MonoBehaviour:
   isPurchased: 0
   isMax: 0
   isAutoProduction: 0
+  is_ground: 1
   slotPrice: 180
   slotProduction: 30
   xpProduction: 6
@@ -26,6 +27,6 @@ MonoBehaviour:
   slotLevel: 1
   upgrades: 0
   totalUpgrades: 0
-  upgradePrice: 1
+  upgradePrice: 45
   slotProductionMultiplier: 1
   slotProductionReduction: 1

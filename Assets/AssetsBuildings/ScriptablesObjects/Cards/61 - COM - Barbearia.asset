@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 61
   cardName: Barbearia
   spriteCard: {fileID: 21300000, guid: 395a77777853bea40986d0747345ad0b, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: 395a77777853bea40986d0747345ad0b, type: 3}
   shadowCard: {fileID: 21300000, guid: 76b0edae27b1b404fb59f1a56f6e5043, type: 3}
   rarityCard: 0
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 30
   timeProduction: 5
   productionMultiplier: 1

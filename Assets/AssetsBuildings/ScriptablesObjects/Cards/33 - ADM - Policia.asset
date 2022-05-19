@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 32
   cardName: Delegacia de Policia
   spriteCard: {fileID: 21300000, guid: 7773cdedbf9edca4d997a45160665cea, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: 7773cdedbf9edca4d997a45160665cea, type: 3}
   shadowCard: {fileID: 21300000, guid: d92c86b6455501548855ed289d69d1dc, type: 3}
   rarityCard: 0
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 200
   timeProduction: 36
   productionMultiplier: 1

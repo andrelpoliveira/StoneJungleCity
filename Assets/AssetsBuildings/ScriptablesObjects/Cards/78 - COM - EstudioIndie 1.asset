@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 78
   cardName: "Est\xFAdio Indie"
   spriteCard: {fileID: 2100550725137660750, guid: 9ff80ec561f4b8342b91484f0187abdc, type: 3}
+  initial_sprite_card: {fileID: 2100550725137660750, guid: 9ff80ec561f4b8342b91484f0187abdc, type: 3}
   shadowCard: {fileID: 9102767708818184946, guid: 9ff80ec561f4b8342b91484f0187abdc, type: 3}
   rarityCard: 3
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 3560000000
   timeProduction: 920
   productionMultiplier: 1

@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 35
   cardName: Hospital
   spriteCard: {fileID: 21300000, guid: ecec8a6e01de3c14788e05f0e8bd2b72, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: ecec8a6e01de3c14788e05f0e8bd2b72, type: 3}
   shadowCard: {fileID: 21300000, guid: 6ddd32610a9d65e468022272c2dd7030, type: 3}
   rarityCard: 1
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 1800
   timeProduction: 140
   productionMultiplier: 1

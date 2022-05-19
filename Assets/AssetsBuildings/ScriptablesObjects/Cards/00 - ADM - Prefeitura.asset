@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 0
   cardName: Prefeitura
   spriteCard: {fileID: 21300000, guid: d37cf50a734cc7646b2b5e551a9ea877, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: d37cf50a734cc7646b2b5e551a9ea877, type: 3}
   shadowCard: {fileID: 21300000, guid: f7084765b6aad62458729d2f1367db47, type: 3}
   rarityCard: 0
   isLiberate: 1
   levelCard: 1
+  card_collected: 0
   production: 2
   timeProduction: 3
   productionMultiplier: 1

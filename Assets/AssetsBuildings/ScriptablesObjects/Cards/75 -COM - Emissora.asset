@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 75
   cardName: Emissora
   spriteCard: {fileID: 7872798786604357985, guid: 9ff80ec561f4b8342b91484f0187abdc, type: 3}
+  initial_sprite_card: {fileID: 7872798786604357985, guid: 9ff80ec561f4b8342b91484f0187abdc, type: 3}
   shadowCard: {fileID: 6576912815585644899, guid: 9ff80ec561f4b8342b91484f0187abdc, type: 3}
   rarityCard: 0
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 33900000
   timeProduction: 740
   productionMultiplier: 1

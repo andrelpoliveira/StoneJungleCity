@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 2
   cardName: Casa Familiar
   spriteCard: {fileID: 21300000, guid: 00c437cc1d2f58249b0191d01829ddd6, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: 00c437cc1d2f58249b0191d01829ddd6, type: 3}
   shadowCard: {fileID: 21300000, guid: e792c5b9486de904a980f568aeb5cb72, type: 3}
   rarityCard: 0
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 3
   timeProduction: 6
   productionMultiplier: 1

@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 65
   cardName: Mercado de Bairro
   spriteCard: {fileID: 21300000, guid: a925de9f612dec4449da15ed5682e41e, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: a925de9f612dec4449da15ed5682e41e, type: 3}
   shadowCard: {fileID: 21300000, guid: fcaa2ba810873554088a0a7ff7beac26, type: 3}
   rarityCard: 0
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 480
   timeProduction: 80
   productionMultiplier: 1

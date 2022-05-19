@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 39
   cardName: Express
   spriteCard: {fileID: 21300000, guid: ebe5b5f862af80b429175d9f3cffb9f7, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: ebe5b5f862af80b429175d9f3cffb9f7, type: 3}
   shadowCard: {fileID: 21300000, guid: 1230e597544955c4b8255207b9a1fed4, type: 3}
   rarityCard: 0
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 64800
   timeProduction: 380
   productionMultiplier: 1

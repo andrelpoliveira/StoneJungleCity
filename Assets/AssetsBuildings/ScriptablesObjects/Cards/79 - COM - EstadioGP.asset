@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 78
   cardName: "Est\xE1dio GP"
   spriteCard: {fileID: -4473800961544722047, guid: 7157771f3084d7147854a477266f0dca, type: 3}
+  initial_sprite_card: {fileID: -4473800961544722047, guid: 7157771f3084d7147854a477266f0dca, type: 3}
   shadowCard: {fileID: -4200421145502261395, guid: 7157771f3084d7147854a477266f0dca, type: 3}
   rarityCard: 3
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 24900000000
   timeProduction: 960
   productionMultiplier: 1

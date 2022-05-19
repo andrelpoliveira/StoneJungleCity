@@ -8,6 +8,7 @@ public class Card : ScriptableObject
     public int      idCard;
     public string   cardName;
     public Sprite   spriteCard;
+    public Sprite   initial_sprite_card;
     public Sprite   shadowCard;
     public Rarity   rarityCard;
 
@@ -27,6 +28,7 @@ public class Card : ScriptableObject
     public void reset()
     {
         if(idCard == 0) { isLiberate = true; } else { isLiberate = false; }
+        spriteCard = initial_sprite_card;
         levelCard = 1;
         card_collected = 0;
         productionMultiplier = 1;

@@ -16,18 +16,21 @@ public class SlotController : MonoBehaviour
     public Image            iconCoinPurchase;
     public TextMeshProUGUI  pricePurchaseTxt;
 
+    [Space]
     [Header("HUD Terrain")]
     public GameObject       huds;
     public SpriteRenderer   bgSlot;
     public SpriteRenderer   buildSprite;
     public Transform        hudPosition;
 
+    [Space]
     [Header("HUD Produção")]
     public GameObject       panelProduction;
     public Image            icoCoinProduction;
     public Image            loadBar;
     public TextMeshProUGUI  productionTxt;
 
+    [Space]
     [Header("HUD Upgrade")]
     public GameObject       panelUpgrade;
     public Image            bgUpgrade;
@@ -37,9 +40,16 @@ public class SlotController : MonoBehaviour
     public TextMeshProUGUI  priceUpgradeTxt;
     public TextMeshProUGUI  slotLevelTxt;
 
+    [Space]
+    [Header("HUD Purchase")]
+    public GameObject       ico_coin_purchase;
+    public GameObject       price_purchase;
+
+    [Space]
     [Header("Slots GamePlay")]
     public Slots            _Slots;
     public double           coin;
+    public bool             is_choose;
     private float           tempTime;
     private float           fillAmount;
     private int             xp;
@@ -103,13 +113,13 @@ public class SlotController : MonoBehaviour
             {
                 bgSlot.sprite = _GameController.slotBg[1];
                 iconCoinPurchase.sprite = _GameController.icoCoin[1];
-                pricePurchaseTxt.color = _GameController.colorText[1];
+                pricePurchaseTxt.colorGradient = new VertexGradient(_GameController.colorText[1]);
             }
             else
             {
                 bgSlot.sprite = _GameController.slotBg[0];
                 iconCoinPurchase.sprite = _GameController.icoCoin[0];
-                pricePurchaseTxt.color = _GameController.colorText[0];
+                pricePurchaseTxt.colorGradient = new VertexGradient(_GameController.colorText[0]);
             }
         }
 
@@ -210,8 +220,21 @@ public class SlotController : MonoBehaviour
         switch(_GameController.currentState)
         {
             case GameState.GAMEPLAY:
-                huds.SetActive(true);
-                _GameController.panelFume.SetActive(false);
+                if (_GameController.isOpen == true)
+                {
+                    huds.SetActive(true);
+                    ico_coin_purchase.SetActive(false);
+                    price_purchase.SetActive(false);
+                    _GameController.panelFume.SetActive(false);
+                }
+                else
+                {
+                    huds.SetActive(true);
+                    ico_coin_purchase.SetActive(true);
+                    price_purchase.SetActive(true);
+                    _GameController.panelFume.SetActive(false);
+                }
+                
                 break;
 
             case GameState.CUT:
@@ -219,11 +242,29 @@ public class SlotController : MonoBehaviour
                 _GameController.panelFume.SetActive(true);
                 break;
 
-            case GameState.COLLECTION:
+            case GameState.MARKET:
                 huds.SetActive(false);
                 _GameController.panelFume.SetActive(true);
                 break;
 
+            case GameState.UPGRADE:
+                ico_coin_purchase.SetActive(false);
+                price_purchase.SetActive(false);
+                break;
+
+            case GameState.SHOPPING:
+                huds.SetActive(false);
+                ico_coin_purchase.SetActive(false);
+                price_purchase.SetActive(false);
+                break;
+
+            case GameState.CHOOSE:
+                huds.SetActive(false);
+                break;
+
+            case GameState.COLLECTION:
+                huds.SetActive(false);
+                break;
         }
     }
 
@@ -239,11 +280,18 @@ public class SlotController : MonoBehaviour
         if(_Slots.slotLevel == 1 && _Slots.upgrades >= _GameController.progressSlot[_Slots.slotLevel -1])
         {
             upgradeStatus(0);
+
+            //Missão inicial
+            if (_GameController.isQuest && _GameController.idQuest == 1 )
+            {
+                _GameController.UpDataQuest();
+            }
         }
         else if (_Slots.slotLevel == 2 && _Slots.upgrades >= _GameController.progressSlot[_Slots.slotLevel - 1])
         {
             upgradeStatus(1);
             _Slots.isAutoProduction = true;
+            _GameController.GetBags(0, 2);
         }
         else if (_Slots.slotLevel == 3 && _Slots.upgrades >= _GameController.progressSlot[_Slots.slotLevel - 1])
         {
@@ -252,11 +300,12 @@ public class SlotController : MonoBehaviour
         else if (_Slots.slotLevel == 4 && _Slots.upgrades >= _GameController.progressSlot[_Slots.slotLevel - 1])
         {
             upgradeStatus(1);
+            _GameController.getGems(25);
+            _GameController.OpenCutReward(_GameController.ico_gem, "Recebeu <color=#ffff00>25</color> gemas", "upgrade");
         }
         else if (_Slots.slotLevel == 5 && _Slots.upgrades >= _GameController.progressSlot[_Slots.slotLevel - 1])
         {
             upgradeStatus(0);
-            _GameController.getGems(25);
         }
         else if (_Slots.slotLevel == 6 && _Slots.upgrades >= _GameController.progressSlot[_Slots.slotLevel - 1])
         {
@@ -275,19 +324,25 @@ public class SlotController : MonoBehaviour
             upgradeStatus(1);
             upgradeStatus(0);
             _GameController.getGems(25);
+            _GameController.OpenCutReward(_GameController.ico_gem, "Recebeu <color=#ffff00>25</color> gemas", "upgrade");
             _Slots.isMax = true;
         }
 
-
-
         _Slots.StartSlotsScriptable();
         UpgradeHudSlot();
+        _GameController.SaveSlot(_Slots);
     }
 
     public void upgradeStatus(int i)
     {
         // i = 0: MULTIPLICADOR
         // i = 1: REDUTOR
+        if (_Slots.slotLevel == 10)
+        {
+            _Slots.slotProductionReduction += 2;
+            _Slots.slotProductionMultiplier += 2;
+            return;
+        }
         _Slots.slotLevel += 1;
         _Slots.upgrades = 0;
 
@@ -386,13 +441,26 @@ public class SlotController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(_GameController.currentState == GameState.GAMEPLAY && _Slots.isPurchased == true)
+        if(_GameController.currentState == GameState.GAMEPLAY && _Slots.isPurchased == true && _Slots.is_ground == true)
         {
-            coinCollect();
+            _GameController.OpenChooseCard(this);
         }
         else if(_GameController.currentState == GameState.GAMEPLAY && _Slots.isPurchased == false && _GameController.checkCoin(_Slots.slotPrice) == true)
         {
-            _GameController.BuySlot(_Slots, this);
+            if (is_choose)
+            {
+                // seleção da carta para terreno
+                _GameController.BuySlot(_Slots, this);
+            }
+            else
+            {
+                _GameController.BuySlot(_Slots, this);
+            }
+            
+        }
+        else if (_GameController.currentState == GameState.GAMEPLAY && _Slots.isPurchased == true)
+        {
+            coinCollect();
         }
     }
 
@@ -421,7 +489,15 @@ public class SlotController : MonoBehaviour
         }
 
         yield return new WaitForSeconds(_GameController.delayBetweenUpgrade);
-        if(isLoop == true) { StartCoroutine("loopUpgrade"); }
+        
+        if(isLoop == true && _GameController.currentState == GameState.UPGRADE)
+        {
+            StartCoroutine("loopUpgrade"); 
+        }
+        else
+        {
+            isLoop = false;
+        }
 
     }
 }

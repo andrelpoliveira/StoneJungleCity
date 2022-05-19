@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 66
   cardName: Hotel do Lago
   spriteCard: {fileID: 21300000, guid: 83b03d3905673cf4f84d382d35e13169, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: 83b03d3905673cf4f84d382d35e13169, type: 3}
   shadowCard: {fileID: 21300000, guid: 25ad18cd91a197645b602605365f1b5b, type: 3}
   rarityCard: 1
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 1440
   timeProduction: 160
   productionMultiplier: 1

@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 11
   cardName: Casa de Luxo do Lago
   spriteCard: {fileID: 21300000, guid: d93c407d1b1f0c44e80f822ad5e280ca, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: d93c407d1b1f0c44e80f822ad5e280ca, type: 3}
   shadowCard: {fileID: 21300000, guid: 1670ffff82c16bb43b440085416bb90e, type: 3}
   rarityCard: 2
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 38900
   timeProduction: 576
   productionMultiplier: 1

@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   idCard: 62
   cardName: Hamburgueria
-  spriteCard: {fileID: 21300000, guid: c806f92c283605746b9d2a7dad006532, type: 3}
+  spriteCard: {fileID: 21300000, guid: f501df9ed29c4c8488c8692e2e03bb25, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: f501df9ed29c4c8488c8692e2e03bb25, type: 3}
   shadowCard: {fileID: 21300000, guid: 43aa4c4a431c6fa438a28ee1660bd166, type: 3}
   rarityCard: 0
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 60
   timeProduction: 10
   productionMultiplier: 1

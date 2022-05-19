@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 5
   cardName: Casa do lago
   spriteCard: {fileID: 21300000, guid: 00554f394ccdaca48a5275e5f0e73706, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: 00554f394ccdaca48a5275e5f0e73706, type: 3}
   shadowCard: {fileID: 21300000, guid: ab585674d762dab48b17b3390be78937, type: 3}
   rarityCard: 0
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 60
   timeProduction: 84
   productionMultiplier: 1

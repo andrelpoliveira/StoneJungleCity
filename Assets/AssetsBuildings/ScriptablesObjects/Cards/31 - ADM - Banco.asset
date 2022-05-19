@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 31
   cardName: Banco
   spriteCard: {fileID: 21300000, guid: 29012b5113dfc4d4f91dad1dc02e0a44, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: 29012b5113dfc4d4f91dad1dc02e0a44, type: 3}
   shadowCard: {fileID: 21300000, guid: d06f20578b0835a4c904841902d63346, type: 3}
   rarityCard: 0
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 25
   timeProduction: 3
   productionMultiplier: 1

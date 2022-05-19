@@ -26,6 +26,6 @@ MonoBehaviour:
   slotLevel: 1
   upgrades: 0
   totalUpgrades: 0
-  upgradePrice: 1
+  upgradePrice: 3
   slotProductionMultiplier: 1
   slotProductionReduction: 1

@@ -42,6 +42,8 @@ public class OpenSuitCase : MonoBehaviour
 
     public void OpenCase()
     {
+        if(_GameController.currentState != GameState.BOOSTER) { return; }
+
         if(qtd_rewards > 0)
         {
             switch (suit_rarity)

@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 3
   cardName: Casa de Fazenda
   spriteCard: {fileID: 21300000, guid: 014afef4d3977244197db03082ca05c3, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: 014afef4d3977244197db03082ca05c3, type: 3}
   shadowCard: {fileID: 21300000, guid: be750893aa27548439496b0baa0e3b95, type: 3}
   rarityCard: 1
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 10
   timeProduction: 12
   productionMultiplier: 1

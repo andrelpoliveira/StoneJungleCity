@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 1
   cardName: "Casa de Fam\xEDlia"
   spriteCard: {fileID: 21300000, guid: d2e1e0fb02145f244bc533e72f068b3f, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: d2e1e0fb02145f244bc533e72f068b3f, type: 3}
   shadowCard: {fileID: 21300000, guid: 7350ca3567b4d6947ba99bfc858a95e9, type: 3}
   rarityCard: 0
-  isLiberate: 0
+  isLiberate: 1
   levelCard: 1
+  card_collected: 1
   production: 2
   timeProduction: 3
   productionMultiplier: 1

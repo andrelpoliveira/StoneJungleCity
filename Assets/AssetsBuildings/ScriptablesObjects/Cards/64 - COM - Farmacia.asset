@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 64
   cardName: Farmacia
   spriteCard: {fileID: 21300000, guid: 576bd7e0a8f9aa140aecf2a8e2de8293, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: 576bd7e0a8f9aa140aecf2a8e2de8293, type: 3}
   shadowCard: {fileID: 21300000, guid: dbabe617f6b32c741b5e5cbe8f607716, type: 3}
   rarityCard: 0
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 240
   timeProduction: 40
   productionMultiplier: 1

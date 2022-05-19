@@ -15,10 +15,12 @@ MonoBehaviour:
   idCard: 36
   cardName: Restaurante Municipal
   spriteCard: {fileID: 21300000, guid: 7a3a2d19bc6a10641bb68ea6367a1ee0, type: 3}
+  initial_sprite_card: {fileID: 21300000, guid: 7a3a2d19bc6a10641bb68ea6367a1ee0, type: 3}
   shadowCard: {fileID: 21300000, guid: 1eeef182d5450db4d831a6e7bd573132, type: 3}
   rarityCard: 0
   isLiberate: 0
   levelCard: 1
+  card_collected: 0
   production: 3600
   timeProduction: 200
   productionMultiplier: 1

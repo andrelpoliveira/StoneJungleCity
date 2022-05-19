@@ -14,6 +14,7 @@ public class Slots : ScriptableObject
     public bool             isPurchased;
     public bool             isMax;
     public bool             isAutoProduction;
+    public bool             is_ground;
 
     public double           slotPrice;
     public double           slotProduction;
@@ -30,7 +31,7 @@ public class Slots : ScriptableObject
 
     public void reset() 
     {
-        if(idSlot == 0) { isPurchased = true; } else { isPurchased = false; }
+        if(idSlot == 0) { isPurchased = true; is_ground = true; } else { isPurchased = false; is_ground = false; }
         slotLevel = 1;
         upgrades = 0;
         totalUpgrades = 0;
