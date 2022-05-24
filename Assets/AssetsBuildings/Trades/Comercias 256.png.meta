@@ -54,6 +54,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -376,6 +377,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Bolsa de Valores: 7875952820178557220
+      Bolsa de Valores Sombra: -5508126076032643721
+      Contabil: 4320931161827564153
+      Contabil Sombra: -676246993866307612
+      Comercial Trade Sombra: 2522633291109226233
+      PostoSombra: 4528461403002286288
+      Comercias 256_0: 2173301990313574877
+      Posto: 1997025802980429008
+      Comercias 256_1: -2360201055958960764
+      Comercial Trade: 7025923106658347727
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
