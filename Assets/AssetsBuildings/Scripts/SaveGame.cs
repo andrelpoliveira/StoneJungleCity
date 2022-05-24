@@ -14,6 +14,12 @@ public struct SaveGame
     [FirestoreProperty]
     public int qtd_suitcase_common { get; set; }
     [FirestoreProperty]
+    public int qtd_suitcase_rare { get; set; }
+    [FirestoreProperty]
+    public int qtd_suitcase_epic { get; set; }
+    [FirestoreProperty]
+    public int qtd_suitcase_legendary { get; set; }
+    [FirestoreProperty]
     public double suitcase_price { get; set; }
     [FirestoreProperty]
     public int multiplier_bonus { get; set; }
@@ -71,5 +77,7 @@ public struct SaveSlot
     public float slot_production_reduction { get; set; }
     [FirestoreProperty]
     public string build_sprite { get; set; }
+    [FirestoreProperty]
+    public bool is_ground { get; set; }
     
 }

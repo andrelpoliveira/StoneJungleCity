@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Firebase;
 using Firebase.Auth;
@@ -11,8 +12,24 @@ public class LoginAuth : MonoBehaviour
     public TMP_InputField email_input;
     public TMP_InputField password_input;
     public TMP_Text message_txt;
+    public ChangesUi change_ui;
     [HideInInspector]
     public string user;
+
+
+    void Start()
+    {
+        if (PlayerPrefs.HasKey("jogatina"))
+        {
+            StartCoroutine(StartLogin(PlayerPrefs.GetString("email"), PlayerPrefs.GetString("senha")));
+            StartCoroutine(change_ui.Load());
+        }
+        else
+        {
+            PlayerPrefs.SetInt("jogatina", 0);
+            print("não existe");
+        }
+    }
 
     public void LoginButton()
     {
@@ -21,10 +38,12 @@ public class LoginAuth : MonoBehaviour
 
     private IEnumerator StartLogin(string email, string password)
     {
+        yield return new WaitForSeconds(3);
+        
         var LoginTask = FireBaseAuthenticator.instance.auth.SignInWithEmailAndPasswordAsync(email, password);
         yield return new WaitUntil(predicate: () => LoginTask.IsCompleted);
-
-        if(LoginTask.Exception != null)
+        
+        if (LoginTask.Exception != null)
         {
             HandleLoginErrors(LoginTask.Exception);
         }
@@ -71,6 +90,12 @@ public class LoginAuth : MonoBehaviour
         message_txt.text = "Logado";
         user = login_task.Result.DisplayName;
         DontDestroyOnLoad(this);
+        if(email_input.text != "" && password_input.text != "")
+        {
+            PlayerPrefs.SetString("email", email_input.text);
+            PlayerPrefs.SetString("senha", password_input.text);
+        }
+        
         SceneManager.LoadScene("CityInterior");
     }
 }

@@ -27,7 +27,9 @@ public class GameController : MonoBehaviour
     public bool isReset;
     public bool is_organization;
 
-    [SerializeField]
+    // Essa variavel tira bug de hud na gameplay
+    [HideInInspector]
+    public SlotController slot_controller3;
     private SlotController[] _SlotController;
     private SlotController slotcontrol;
     private SlotController slot_choose;
@@ -160,6 +162,7 @@ public class GameController : MonoBehaviour
 
     [Space]
     [Header("Button Menu")]
+    [HideInInspector]
     public Animator menuBar;
     public GameObject menuGame;
     [HideInInspector]
@@ -203,6 +206,11 @@ public class GameController : MonoBehaviour
         slotcontrol = FindObjectOfType(typeof(SlotController)) as SlotController;
         foreach (SlotController sc in _SlotController)
         {
+            if (sc.bgSlot.name == "Slot3")
+            {
+                sc._GameController = this;
+                slot_controller3 = sc;
+            }
             sc._GameController = this;
             sc._Slots._GameController = this;
 
@@ -263,6 +271,8 @@ public class GameController : MonoBehaviour
         {
             UpDataQuest();
         }
+        print("coins " + coins + " qtdcoin " + qtdCoin);
+        if (qtdCoin <= 0) { return; }
         SaveGame();
     }
 
@@ -271,6 +281,8 @@ public class GameController : MonoBehaviour
         gems += qtdGems;
         if (gems > 0) { gemsAccumulated += qtdGems; }
         gemsTxt.text = currencyConverterGem(gems);
+
+        if(qtdGems <= 0) { return; }
 
         SaveGame();
     }
@@ -309,6 +321,8 @@ public class GameController : MonoBehaviour
         }
 
         barXp.fillAmount = fillAmountXp;
+
+        if(qtdXp <= 0) { return; }
 
         SaveGame();
     }
@@ -396,6 +410,13 @@ public class GameController : MonoBehaviour
         return valor.ToString();
     }
 
+    public void UpgradeUI()
+    {
+        getCoin(0);
+        getGems(0);
+        getXp(0);
+        CheckBags();
+    }
     private string removeZero(string valor)
     {
         string r = "";
@@ -1037,17 +1058,14 @@ public class GameController : MonoBehaviour
         switch (prev_window)
         {
             case "upgrade":
+                print("upgrade");
                 panelGamePlay.SetActive(true);
-                changeGameState(GameState.GAMEPLAY);
+                changeGameState(GameState.UPGRADE);
                 upgradeMode();
                 break;
 
-            case "booster":
-                panelGamePlay.SetActive(true);
-                changeGameState(GameState.BOOSTER);
-                break;
-
             case "game":
+                print("game");
                 panelGamePlay.SetActive(true);
                 changeGameState(GameState.GAMEPLAY);
                 break;
@@ -1231,14 +1249,17 @@ public class GameController : MonoBehaviour
             gold_accumulated = coinsAccumulated,
             gems = gems,
             gems_accumulated = gemsAccumulated,
-            qtd_suitcase_common = qtd_suit_common,
+            qtd_suitcase_common = suit_bags[0],
+            qtd_suitcase_rare = suit_bags[1],
+            qtd_suitcase_epic = suit_bags[2],
+            qtd_suitcase_legendary = suit_bags[3],
             suitcase_price = suit_price,
             multiplier_bonus = multiplierBonus,
             reductor_bonus = reductionBonus,
             is_quest = isQuest,
             id_quest = idQuest,
             xp = xp,
-            xp_accumulated = xpAccumulated
+            xp_accumulated = xpAccumulated,
         };
 
         // Salvando no banco
@@ -1295,6 +1316,7 @@ public class GameController : MonoBehaviour
             upgrades = s.upgrades,
             upgrade_price = s.upgradePrice,
             build_sprite = temp,
+            is_ground = s.is_ground,
         };
 
         // Salvando no banco
@@ -1319,12 +1341,16 @@ public class GameController : MonoBehaviour
             gemsAccumulated = counter.gems_accumulated;
             multiplierBonus = counter.multiplier_bonus;
             reductionBonus = counter.reductor_bonus;
-            qtd_suit_common = counter.qtd_suitcase_common;
+            suit_bags[0] = counter.qtd_suitcase_common;
+            suit_bags[1] = counter.qtd_suitcase_rare;
+            suit_bags[2] = counter.qtd_suitcase_epic;
+            suit_bags[3] = counter.qtd_suitcase_legendary;
             suit_price = counter.suitcase_price;
             isQuest = counter.is_quest;
             idQuest = counter.id_quest;
             xp = counter.xp;
             xpAccumulated = counter.xp_accumulated;
+            UpgradeUI();
         });
     }
 
@@ -1365,6 +1391,7 @@ public class GameController : MonoBehaviour
             s.upgrades = counter.upgrades;
             s.totalUpgrades = counter.total_upgrades;
             s.upgradePrice = counter.upgrade_price;
+            s.is_ground = counter.is_ground;
             s.StartSlotsScriptable();
 
             foreach (var sprite in constructions)

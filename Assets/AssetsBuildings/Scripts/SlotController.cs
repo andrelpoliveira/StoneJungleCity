@@ -49,7 +49,6 @@ public class SlotController : MonoBehaviour
     [Header("Slots GamePlay")]
     public Slots            _Slots;
     public double           coin;
-    public bool             is_choose;
     private float           tempTime;
     private float           fillAmount;
     private int             xp;
@@ -223,6 +222,7 @@ public class SlotController : MonoBehaviour
                 if (_GameController.isOpen == true)
                 {
                     huds.SetActive(true);
+                    _GameController.slot_controller3.huds.SetActive(false);
                     ico_coin_purchase.SetActive(false);
                     price_purchase.SetActive(false);
                     _GameController.panelFume.SetActive(false);
@@ -230,6 +230,7 @@ public class SlotController : MonoBehaviour
                 else
                 {
                     huds.SetActive(true);
+                    _GameController.slot_controller3.huds.SetActive(true);
                     ico_coin_purchase.SetActive(true);
                     price_purchase.SetActive(true);
                     _GameController.panelFume.SetActive(false);
@@ -441,21 +442,14 @@ public class SlotController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(_GameController.currentState == GameState.GAMEPLAY && _Slots.isPurchased == true && _Slots.is_ground == true)
+        // Controle de seleção da carta para terreno
+        if (_GameController.currentState == GameState.GAMEPLAY && _Slots.isPurchased == true && _Slots.is_ground == true)
         {
             _GameController.OpenChooseCard(this);
         }
         else if(_GameController.currentState == GameState.GAMEPLAY && _Slots.isPurchased == false && _GameController.checkCoin(_Slots.slotPrice) == true)
         {
-            if (is_choose)
-            {
-                // seleção da carta para terreno
-                _GameController.BuySlot(_Slots, this);
-            }
-            else
-            {
-                _GameController.BuySlot(_Slots, this);
-            }
+           _GameController.BuySlot(_Slots, this);
             
         }
         else if (_GameController.currentState == GameState.GAMEPLAY && _Slots.isPurchased == true)

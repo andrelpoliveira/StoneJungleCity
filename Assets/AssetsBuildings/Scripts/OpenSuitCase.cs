@@ -203,7 +203,7 @@ public class OpenSuitCase : MonoBehaviour
 
     public void CloseReward()
     {
-        _GameController.changeGameState(GameState.COLLECTION);
+        _GameController.changeGameState(GameState.MARKET);
         _GameController.panel_open_booster.SetActive(false);
     }
 }
