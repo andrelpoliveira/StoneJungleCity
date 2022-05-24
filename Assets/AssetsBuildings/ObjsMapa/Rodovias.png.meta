@@ -45,6 +45,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -283,6 +284,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Rodovias_1: -5057106635319418307
+      Rodovias_2: -8220671574146350393
+      Rodovias_3: -1528063121135260677
+      Rodovias_0: -4628566094955623293
+      Rodovias_5: 4485629953676305049
+      Rodovias_4: 5745075749825160143
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

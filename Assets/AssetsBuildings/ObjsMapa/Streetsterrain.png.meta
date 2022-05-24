@@ -75,6 +75,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -544,6 +545,24 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Streetsterrain_4: -7753716926807137598
+      Streetsterrain_0: 19234029429199949
+      Streetsterrain_6: 8963294897726988729
+      Streetsterrain_15: 3661837716886099276
+      Streetsterrain_1: 1856726322193344015
+      Streetsterrain_8: 3259695642385283151
+      Streetsterrain_7: -4164057588807360109
+      Streetsterrain_2: -597055325414078554
+      Streetsterrain_9: 5375077353779713566
+      Streetsterrain_16: -7890793413157974038
+      Streetsterrain_14: 4342338515824699325
+      Streetsterrain_10: 7224599258884360959
+      Streetsterrain_11: -827138688143661443
+      Streetsterrain_3: 3786548219643805639
+      Streetsterrain_12: -1838182685801887133
+      Streetsterrain_13: 4959380695657955312
+      Streetsterrain_5: 1546018678551495117
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

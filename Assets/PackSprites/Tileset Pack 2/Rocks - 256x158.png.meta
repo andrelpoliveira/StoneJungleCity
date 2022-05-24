@@ -171,6 +171,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -1300,6 +1301,56 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      TilesetPack - Roads_6: 21300012
+      TilesetPack - Roads_37: 21300074
+      TilesetPack - Roads_14: 21300028
+      TilesetPack - Roads_27: 21300054
+      TilesetPack - Roads_4: 21300008
+      TilesetPack - Roads_1: 21300002
+      TilesetPack - Roads_28: 21300056
+      TilesetPack - Roads_13: 21300026
+      TilesetPack - Roads_20: 21300040
+      TilesetPack - Roads_42: 21300084
+      TilesetPack - Roads_2: 21300004
+      TilesetPack - Roads_40: 21300080
+      TilesetPack - Roads_34: 21300068
+      TilesetPack - Roads_33: 21300066
+      TilesetPack - Roads_22: 21300044
+      TilesetPack - Roads_12: 21300024
+      TilesetPack - Roads_39: 21300078
+      TilesetPack - Roads_16: 21300032
+      TilesetPack - Roads_46: 21300092
+      TilesetPack - Roads_9: 21300018
+      TilesetPack - Roads_47: 21300094
+      TilesetPack - Roads_17: 21300034
+      TilesetPack - Roads_32: 21300064
+      TilesetPack - Roads_24: 21300048
+      TilesetPack - Roads_41: 21300082
+      TilesetPack - Roads_3: 21300006
+      TilesetPack - Roads_48: 21300096
+      TilesetPack - Roads_35: 21300070
+      TilesetPack - Roads_18: 21300036
+      TilesetPack - Roads_11: 21300022
+      TilesetPack - Roads_5: 21300010
+      TilesetPack - Roads_29: 21300058
+      TilesetPack - Roads_26: 21300052
+      TilesetPack - Roads_36: 21300072
+      TilesetPack - Roads_7: 21300014
+      TilesetPack - Roads_19: 21300038
+      TilesetPack - Roads_25: 21300050
+      TilesetPack - Roads_38: 21300076
+      TilesetPack - Roads_43: 21300086
+      TilesetPack - Roads_8: 21300016
+      TilesetPack - Roads_0: 21300000
+      TilesetPack - Roads_30: 21300060
+      TilesetPack - Roads_21: 21300042
+      TilesetPack - Roads_23: 21300046
+      TilesetPack - Roads_31: 21300062
+      TilesetPack - Roads_10: 21300020
+      TilesetPack - Roads_44: 21300088
+      TilesetPack - Roads_45: 21300090
+      TilesetPack - Roads_15: 21300030
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

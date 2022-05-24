@@ -54,6 +54,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -376,6 +377,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      ComercialCosmeticoSombra: -8880432222077337788
+      Emissora: 7872798786604357985
+      ComercialCosmetico: -5650149770742614142
+      ComercialStoneSombra: -526020091043755756
+      ComercialStone: -7549891986248490945
+      EmissoraSombra: 6576912815585644899
+      ComercialIndieSombra: 9102767708818184946
+      HotelStoneSombra: 2383680272742229277
+      ComercialIndie: 2100550725137660750
+      HotelStone: 93120518309403720
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
