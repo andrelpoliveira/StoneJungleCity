@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using Firebase.Firestore;
-using Firebase.Extensions;
 
 public enum GameState
 {
@@ -19,9 +17,7 @@ public enum Rarity
 
 public class GameController : MonoBehaviour
 {
-    private FirebaseFirestore db;
-    private ListenerRegistration listenerRegistration;
-    
+
     [HideInInspector]
     public string user;
     public bool isReset;
@@ -33,8 +29,8 @@ public class GameController : MonoBehaviour
     private SlotController[] _SlotController;
     private SlotController slotcontrol;
     private SlotController slot_choose;
-    private LoginAuth log_auth;
-    
+
+
     [Header("Gerenciamento de painel")]
     public GameObject panelGamePlay;
     public GameObject panelFume;
@@ -55,7 +51,7 @@ public class GameController : MonoBehaviour
     public Sprite[] slotBg;  //0 - Inativo, 1 - Ativo
     public Sprite[] bgUpgrade; // 0- inativo, 1 Ativo, 2 Maximizado
     public Color[] colorText; // 0 - inativa, 1 - ativa
-    public Sprite[] bg_card;    //0 - COMUM, 1 - RARA, 2 - ÉPICO, 3 - LENDÁRIA, 4 - NÃO TEM
+    public Sprite[] bg_card;    //0 - COMUM, 1 - RARA, 2 - ï¿½PICO, 3 - LENDï¿½RIA, 4 - Nï¿½O TEM
     public CardCollection[] slot_collection;
     public Sprite[] constructions;
 
@@ -71,39 +67,39 @@ public class GameController : MonoBehaviour
 
 
     public TextMeshProUGUI questTxt;
-    public bool isQuest;    //Booleana para verificar se está em quest
+    public bool isQuest;    //Booleana para verificar se estï¿½ em quest
     public int idQuest;     //Indice da quest atual
     [TextArea]
-    public string[] questDescription;   //Descrição da Quest
+    public string[] questDescription;   //Descriï¿½ï¿½o da Quest
     public GameObject qtd_bags;
     public TMP_Text qtd_bags_txt;
 
     [Space]
     [Header("CUT Compra")]
-    
+
     public TextMeshProUGUI buyDescriptiontxt;
     public Image icoBuild;
 
     [Space]
     [Header("CUT Reward")]
-    
+
     public TextMeshProUGUI reward_description;
     public Image ico_reward;
     private string prev_window;
 
     [Space]
     [Header("HUD Booster")]
-    
+
     public OpenSuitCase _OpenSuitCase;
     public TMP_Text booster_price_txt;
     public GameObject[] qtd_booster_bags;
     public TMP_Text[] qtd_booster_bags_txt;
 
     [Space]
-    [Header("HUD Botões")]
+    [Header("HUD Botï¿½es")]
     public GameObject btnUpgrade;
     public GameObject btn_market;
-    
+
 
     [Space]
     [Header("Scriptables")]
@@ -129,7 +125,7 @@ public class GameController : MonoBehaviour
     public GameObject textgemPrefab;
 
     [Space]
-    [Header("Variáveis GamePlay")]
+    [Header("Variï¿½veis GamePlay")]
     public GameState currentState;
     [SerializeField]
     private double coins, coinsAccumulated;
@@ -145,11 +141,11 @@ public class GameController : MonoBehaviour
     public int qtd_suit_common;
     public double suit_price;
     public int[] suit_price_gems;
-    public int[] suit_bags; // 0 - Comum 1 - rara 2 - épica 3 - lenadária 
-    
+    public int[] suit_bags; // 0 - Comum 1 - rara 2 - ï¿½pica 3 - lenadï¿½ria
+
 
     [Space]
-    [Header("Bônus de GamePlay")]
+    [Header("Bï¿½nus de GamePlay")]
     public int multiplierBonus;
     public int multiplierBonusTemp;
     public float reductionBonus;
@@ -171,10 +167,6 @@ public class GameController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        log_auth = FindObjectOfType(typeof(LoginAuth)) as LoginAuth;
-        user = log_auth.user;
-        db = FirebaseFirestore.DefaultInstance;
-
         LoadGame();
 
         if (isReset == true) { resete(); }
@@ -188,7 +180,7 @@ public class GameController : MonoBehaviour
         panel_purchase.SetActive(false);
         _OpenSuitCase._GameController = this;
 
-        // Teste se está em quest
+        // Teste se estï¿½ em quest
         if (isQuest == true)
         {
             panelQuest.SetActive(true);
@@ -255,18 +247,13 @@ public class GameController : MonoBehaviour
         //getCoin(1e+5);
     }
 
-    void OnDestroy()
-    {
-        listenerRegistration.Stop();
-    }
-
     public void getCoin(double qtdCoin)
     {
         coins += qtdCoin;
         if (qtdCoin > 0) { coinsAccumulated += qtdCoin; }
         coinTxt.text = currencyConverterCoin(coins);
 
-        //Missão inicial
+        //Missï¿½o inicial
         if (isQuest && idQuest == 0 && coinsAccumulated >= 20)
         {
             UpDataQuest();
@@ -556,7 +543,7 @@ public class GameController : MonoBehaviour
         sc.buildSprite.sprite = ico_construct;
 
         SaveSlot(s);
-        // Missão inicial
+        // Missï¿½o inicial
         if (isQuest && idQuest == 2)
         {
             UpDataQuest();
@@ -669,7 +656,7 @@ public class GameController : MonoBehaviour
                 _OpenSuitCase.Start();
                 break;
 
-            case 2: // Maleta Épica
+            case 2: // Maleta ï¿½pica
                 if (suit_bags[id_booster] <= 0)
                 {
                     if (!checkGems(suit_price_gems[id_booster]))
@@ -691,7 +678,7 @@ public class GameController : MonoBehaviour
                 _OpenSuitCase.Start();
                 break;
 
-            case 3: // Maleta Lendária
+            case 3: // Maleta Lendï¿½ria
                 if (suit_bags[id_booster] <= 0)
                 {
                     if (!checkGems(suit_price_gems[id_booster]))
@@ -940,7 +927,7 @@ public class GameController : MonoBehaviour
         if (!c.isMax)
         {
             c.card_collected += qtd;
-            
+
             if(c.card_collected >= progress_card[c.levelCard - 1])
             {
                 int dif = c.card_collected - progress_card[c.levelCard - 1];
@@ -958,7 +945,7 @@ public class GameController : MonoBehaviour
                         c.isMax = true;
 
                         if(dif > 0) { MaxRewardRarity(c.rarityCard); }
-                        
+
                         c.card_collected = 0;
                         break;
                 }
@@ -972,7 +959,7 @@ public class GameController : MonoBehaviour
             // Recompensa por carta maximizada
             MaxRewardRarity(c.rarityCard);
         }
-        
+
         UpgradeMarketGame();
         SaveCard(c);
     }
@@ -998,7 +985,7 @@ public class GameController : MonoBehaviour
                 break;
         }
     }
-    
+
     void UpdateSlot()
     {
         foreach (Slots s in slots)
@@ -1242,53 +1229,12 @@ public class GameController : MonoBehaviour
 
     public void SaveGame()
     {
-        // Passando informações para serem salvas
-        SaveGame save = new SaveGame
-        {
-            gold = coins,
-            gold_accumulated = coinsAccumulated,
-            gems = gems,
-            gems_accumulated = gemsAccumulated,
-            qtd_suitcase_common = suit_bags[0],
-            qtd_suitcase_rare = suit_bags[1],
-            qtd_suitcase_epic = suit_bags[2],
-            qtd_suitcase_legendary = suit_bags[3],
-            suitcase_price = suit_price,
-            multiplier_bonus = multiplierBonus,
-            reductor_bonus = reductionBonus,
-            is_quest = isQuest,
-            id_quest = idQuest,
-            xp = xp,
-            xp_accumulated = xpAccumulated,
-        };
-
-        // Salvando no banco
-        DocumentReference count_ref = db.Collection(user).Document("game");
-        count_ref.SetAsync(save).ContinueWithOnMainThread(task => {
-
-            Debug.Log("Salvou o jogo");
-        });
+        //
     }
 
     public void SaveCard(Card c)
     {
-        // Passando informações para serem salvas
-        SaveCard save = new SaveCard
-        {
-            is_liberate = c.isLiberate,
-            is_max = c.isMax,
-            card_collected = c.card_collected,
-            level_card = c.levelCard,
-            production_multiplier = c.productionMultiplier,
-            production_reduction = c.productionReduction
-        };
-
-        // Salvando no banco
-        DocumentReference count_ref = db.Collection(user).Document(c.cardName);
-        count_ref.SetAsync(save).ContinueWithOnMainThread(task => {
-
-            Debug.Log("Salvou a carta " + c.name);
-        });
+        //
     }
 
     public void SaveSlot(Slots s)
@@ -1302,114 +1248,22 @@ public class GameController : MonoBehaviour
                 temp = sc.buildSprite.sprite.name;
             }
         }
-        // Passando informações para serem salvas
-        SaveSlot save = new SaveSlot
-        {
-            id_slot = s.idSlot,
-            is_auto_production = s.isAutoProduction,
-            is_max = s.isMax,
-            is_purchased = s.isPurchased,
-            slot_level = s.slotLevel,
-            slot_production_multiplier = s.slotProductionMultiplier,
-            slot_production_reduction = s.slotProductionReduction,
-            total_upgrades = s.totalUpgrades,
-            upgrades = s.upgrades,
-            upgrade_price = s.upgradePrice,
-            build_sprite = temp,
-            is_ground = s.is_ground,
-        };
 
-        // Salvando no banco
-        DocumentReference count_ref = db.Collection(user).Document(s.name);
-        count_ref.SetAsync(save).ContinueWithOnMainThread(task => {
-
-            Debug.Log("Salvou slot " + s.name);
-        });
     }
 
     public void LoadGame()
     {
-        // Leitura dos dados do game
-        listenerRegistration = db.Collection(user).Document("game").Listen(snapshot =>
-        {
-            if (!snapshot.Exists) { return; }
-
-            SaveGame counter = snapshot.ConvertTo<SaveGame>();
-            coins = counter.gold;
-            coinsAccumulated = counter.gold_accumulated;
-            gems = counter.gems;
-            gemsAccumulated = counter.gems_accumulated;
-            multiplierBonus = counter.multiplier_bonus;
-            reductionBonus = counter.reductor_bonus;
-            suit_bags[0] = counter.qtd_suitcase_common;
-            suit_bags[1] = counter.qtd_suitcase_rare;
-            suit_bags[2] = counter.qtd_suitcase_epic;
-            suit_bags[3] = counter.qtd_suitcase_legendary;
-            suit_price = counter.suitcase_price;
-            isQuest = counter.is_quest;
-            idQuest = counter.id_quest;
-            xp = counter.xp;
-            xpAccumulated = counter.xp_accumulated;
-            UpgradeUI();
-        });
+        //
     }
 
     public void LoadCard(Card c)
     {
-        // Leitura dos dados das cartas
-        listenerRegistration = db.Collection(user).Document(c.cardName).Listen(snapshot =>
-        {
-            if (!snapshot.Exists) { return; }
-
-            SaveCard counter = snapshot.ConvertTo<SaveCard>();
-            c.isLiberate = counter.is_liberate;
-            c.isMax = counter.is_max;
-            c.card_collected = counter.card_collected;
-            c.levelCard = counter.card_collected;
-            c.productionMultiplier = counter.production_multiplier;
-            c.productionReduction = counter.production_reduction;
-        });
+        //
     }
 
     public void LoadSlot(Slots s)
     {
-        Sprite temp = null;
+        //
 
-        // Leitura dos dados das cartas
-        listenerRegistration = db.Collection(user).Document(s.name).Listen(snapshot =>
-        {
-            if (!snapshot.Exists) { return; }
-
-            SaveSlot counter = snapshot.ConvertTo<SaveSlot>();
-            s.idSlot = counter.id_slot;
-            s.isAutoProduction = counter.is_auto_production;
-            s.isMax = counter.is_max;
-            s.isPurchased = counter.is_purchased;
-            s.slotLevel = counter.slot_level;
-            s.slotProductionMultiplier = counter.slot_production_multiplier;
-            s.slotProductionReduction = counter.slot_production_reduction;
-            s.upgrades = counter.upgrades;
-            s.totalUpgrades = counter.total_upgrades;
-            s.upgradePrice = counter.upgrade_price;
-            s.is_ground = counter.is_ground;
-            s.StartSlotsScriptable();
-
-            foreach (var sprite in constructions)
-            {
-                if(counter.build_sprite == sprite.name)
-                {
-                    temp = sprite;
-                }
-            }
-
-            foreach (SlotController sc in _SlotController)
-            {
-                if (sc._Slots.idSlot == counter.id_slot)
-                {
-                    sc.StartSlot();
-                    sc.buildSprite.sprite = temp;
-                }
-            }
-        });
     }
 }
